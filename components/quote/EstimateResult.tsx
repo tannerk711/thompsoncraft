@@ -18,8 +18,7 @@ type EstimateResultProps = {
 
 export default function EstimateResult({ estimate }: EstimateResultProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-2xl">
-      <div className="text-center">
+    <div className="text-center">
         {/* Success Icon */}
         <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-emerald-500 shadow-lg shadow-green-500/30">
         <svg
@@ -202,7 +201,6 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
         >
           Back to Home
         </Link>
-      </div>
       </div>
     </div>
   );
