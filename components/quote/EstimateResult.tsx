@@ -59,7 +59,7 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
           {/* Price Display */}
           <div className="mt-2">
             <div className="text-5xl font-bold font-display tracking-tight">
-              {estimate.recommendedPrice || estimate.priceRange}
+              {estimate.priceRange}
             </div>
             <p className="mt-2 text-sm text-white/80">
               Based on {estimate.estimatedVolume}

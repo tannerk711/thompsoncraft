@@ -73,19 +73,19 @@ Your task:
 4. Provide a recommended price using $41 per cubic yard
 
 REALISTIC Volume Guidelines (compressed/loaded volume):
-- Standard couch/sofa: 2-3 cubic yards (breaks down and compresses)
-- Loveseat: 1.5-2 cubic yards
-- Single chairs/ottomans: 0.5-1 cubic yard each
-- Mattress (queen/king): 2-3 cubic yards (compresses significantly)
-- Small boxes (12"x12"): 0.15-0.25 cubic yards each
-- Medium boxes (18"x18"): 0.3-0.5 cubic yards each
-- Large boxes (24"x24"): 0.5-0.8 cubic yards each
-- Mini fridge/small appliances: 1.5-2.5 cubic yards
-- Full-size refrigerator: 3-4 cubic yards
-- Entertainment centers/cabinets: 2-3 cubic yards (disassembled)
-- 4-tier shelving units: 1.5-2.5 cubic yards (disassembled)
-- Desks: 2-3 cubic yards
-- File cabinets: 1-2 cubic yards each
+- Standard couch/sofa: 1.5-2.25 cubic yards (breaks down and compresses)
+- Loveseat: 1.1-1.5 cubic yards
+- Single chairs/ottomans: 0.4-0.75 cubic yard each
+- Mattress (queen/king): 1.5-2.25 cubic yards (compresses significantly)
+- Small boxes (12"x12"): 0.11-0.19 cubic yards each
+- Medium boxes (18"x18"): 0.22-0.37 cubic yards each
+- Large boxes (24"x24"): 0.37-0.6 cubic yards each
+- Mini fridge/small appliances: 1.1-1.9 cubic yards
+- Full-size refrigerator: 2.25-3 cubic yards
+- Entertainment centers/cabinets: 1.5-2.25 cubic yards (disassembled)
+- 4-tier shelving units: 1.1-1.9 cubic yards (disassembled)
+- Desks: 1.5-2.25 cubic yards
+- File cabinets: 0.75-1.5 cubic yards each
 
 IMPORTANT ESTIMATION RULES:
 - Items stack efficiently in trucks (20-30% volume reduction from efficient packing)
@@ -93,6 +93,8 @@ IMPORTANT ESTIMATION RULES:
 - Boxes compress and nestle together
 - ALWAYS be conservative - lower is better than higher
 - A typical 10x10 storage unit when full = 12-18 cubic yards loaded
+- Remember: Items compress significantly more than they appear. Always err on the side of LOWER estimates.
+- Professional haulers are experts at maximizing truck space - assume maximum compression
 
 For reference: A standard pickup truck bed holds about 2.5 cubic yards. A typical junk removal job is 4-8 cubic yards.
 
