@@ -12,8 +12,8 @@ declare global {
 // Helper function to generate Cloudinary thumbnail URLs
 function generateThumbnailUrl(secureUrl: string): string {
   // Cloudinary URL format: https://res.cloudinary.com/{cloud}/image/upload/{transformations}/{public_id}
-  // Insert transformation parameters for optimized thumbnails
-  return secureUrl.replace('/upload/', '/upload/w_400,h_400,c_fill,q_auto,f_auto/');
+  // Insert transformation parameters for optimized thumbnails (smaller for mobile performance)
+  return secureUrl.replace('/upload/', '/upload/w_300,h_300,c_fill,q_60,f_auto/');
 }
 
 export default function PhotoUploadStep() {

@@ -3,7 +3,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 
 // Configure maximum duration for this serverless function (Vercel)
-export const maxDuration = 10; // 10 seconds (Hobby plan max)
+export const maxDuration = 15; // 15 seconds (Pro plan - gives buffer for mobile)
 
 // Validation schema
 const estimateRequestSchema = z.object({
@@ -121,59 +121,27 @@ export async function POST(request: NextRequest) {
       })
     );
 
-    const prompt = `You are an expert junk removal estimator. Analyze these photos carefully and provide a detailed, accurate estimate.
+    const prompt = `You are a junk removal estimator. Analyze the photos and provide an accurate estimate.
 
-${notes ? `Additional notes from customer: ${notes}` : ''}
+${notes ? `Customer notes: ${notes}` : ''}
 
-CRITICAL: Your estimate must reflect the ACTUAL LOADED VOLUME in a truck after items are broken down, stacked, and compressed efficiently. DO NOT simply add up individual item volumes - that leads to massive overestimation.
+CRITICAL: Estimate LOADED truck volume after items are broken down and compressed. Don't add raw volumes.
 
-Your task:
-1. Identify and list EVERY visible item in the photos
-2. Estimate the compressed cubic yards for each item (as it would fit in a truck)
-3. Calculate conservative, mid-range, and higher TOTAL volume estimates
-4. Provide a recommended price using $46 per cubic yard
+Volume Guidelines (compressed):
+- Couch: 1.5-2.25 cy | Loveseat: 1.1-1.5 cy | Chair: 0.4-0.75 cy
+- Mattress: 1.5-2.25 cy | Boxes (sm/med/lg): 0.15/0.3/0.5 cy
+- Appliances: Mini 1.5 cy, Full 2.5 cy | Desk: 1.5-2.25 cy
 
-REALISTIC Volume Guidelines (compressed/loaded volume):
-- Standard couch/sofa: 1.5-2.25 cubic yards (breaks down and compresses)
-- Loveseat: 1.1-1.5 cubic yards
-- Single chairs/ottomans: 0.4-0.75 cubic yard each
-- Mattress (queen/king): 1.5-2.25 cubic yards (compresses significantly)
-- Small boxes (12"x12"): 0.11-0.19 cubic yards each
-- Medium boxes (18"x18"): 0.22-0.37 cubic yards each
-- Large boxes (24"x24"): 0.37-0.6 cubic yards each
-- Mini fridge/small appliances: 1.1-1.9 cubic yards
-- Full-size refrigerator: 2.25-3 cubic yards
-- Entertainment centers/cabinets: 1.5-2.25 cubic yards (disassembled)
-- 4-tier shelving units: 1.1-1.9 cubic yards (disassembled)
-- Desks: 1.5-2.25 cubic yards
-- File cabinets: 0.75-1.5 cubic yards each
+Rules: Items compress 20-30%. Be conservative. Typical job = 4-8 cy. Rate: $46/cy.
 
-IMPORTANT ESTIMATION RULES:
-- Items stack efficiently in trucks (20-30% volume reduction from efficient packing)
-- Furniture breaks down (remove legs, cushions separate)
-- Boxes compress and nestle together
-- ALWAYS be conservative - lower is better than higher
-- A typical 10x10 storage unit when full = 12-18 cubic yards loaded
-- Remember: Items compress significantly more than they appear. Always err on the side of LOWER estimates.
-- Professional haulers are experts at maximizing truck space - assume maximum compression
-
-For reference: A standard pickup truck bed holds about 2.5 cubic yards. A typical junk removal job is 4-8 cubic yards.
-
-Format your response as JSON with these exact keys:
+Return JSON:
 {
-  "detectedItems": [
-    {"item": "Item description", "volume": "~X cy"},
-    {"item": "Item description", "volume": "~X cy"}
-  ],
-  "volumeBreakdown": {
-    "conservative": "X cubic yards",
-    "midRange": "X cubic yards",
-    "high": "X cubic yards"
-  },
+  "detectedItems": [{"item": "description", "volume": "~X cy"}],
+  "volumeBreakdown": {"conservative": "X cubic yards", "midRange": "X cubic yards", "high": "X cubic yards"},
   "estimatedVolume": "X-Y cubic yards",
   "priceRange": "$XXX-$XXX",
   "recommendedPrice": "$XXX-$XXX",
-  "reasoning": "Detailed explanation of your methodology and how you calculated the volume",
+  "reasoning": "Brief methodology",
   "confidence": "High/Medium/Low"
 }`;
 
