@@ -10,7 +10,10 @@ const estimateRequestSchema = z.object({
   photos: z.array(z.object({
     url: z.string().url().max(500),
     publicId: z.string().max(200).optional(),
-    thumbnail: z.string().url().max(500).optional(),
+    // Accept valid URLs or empty strings, convert empty to undefined
+    thumbnail: z.string().max(500).optional()
+      .transform(val => val && val.trim() !== '' ? val : undefined)
+      .pipe(z.string().url().max(500).optional()),
   })).min(1).max(10),
   notes: z.string().max(500).optional(),
 });
@@ -195,13 +198,33 @@ Format your response as JSON with these exact keys:
     const responseText =
       message.content[0].type === 'text' ? message.content[0].text : '';
 
-    // Extract JSON from the response
-    const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      throw new Error('Failed to parse AI response');
+    // Extract JSON from the response with multiple fallback strategies
+    let estimate;
+    try {
+      // Strategy 1: Try direct parse (if Claude returns pure JSON)
+      estimate = JSON.parse(responseText);
+    } catch {
+      try {
+        // Strategy 2: Extract JSON with regex (find first { to last })
+        const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) {
+          throw new Error('No JSON found in response');
+        }
+        estimate = JSON.parse(jsonMatch[0]);
+      } catch {
+        // Strategy 3: Look for JSON in code blocks
+        const codeBlockMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+        if (codeBlockMatch) {
+          estimate = JSON.parse(codeBlockMatch[1]);
+        } else {
+          // Log the response in development for debugging
+          if (process.env.NODE_ENV !== 'production') {
+            console.error('Failed to parse AI response:', responseText);
+          }
+          throw new Error('Failed to parse AI response');
+        }
+      }
     }
-
-    const estimate = JSON.parse(jsonMatch[0]);
 
     return NextResponse.json(estimate);
   } catch (error: any) {
