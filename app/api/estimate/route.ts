@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 
+// Configure maximum duration for this serverless function (Vercel)
+export const maxDuration = 10; // 10 seconds (Hobby plan max)
+
 // Validation schema
 const estimateRequestSchema = z.object({
   photos: z.array(z.object({
@@ -29,8 +32,10 @@ async function urlToBase64(url: string): Promise<{ base64: string; mediaType: st
   }
 
   // SECURITY: Prevent redirects to internal services
+  // Add timeout to prevent hanging on slow connections
   const response = await fetch(url, {
     redirect: 'error',
+    signal: AbortSignal.timeout(5000), // 5 second timeout per image
   });
 
   // SECURITY: Validate content-type is actually an image
@@ -92,10 +97,13 @@ export async function POST(request: NextRequest) {
     const anthropic = new Anthropic({ apiKey });
 
     // Convert all photos to base64
+    // OPTIMIZATION: Use thumbnails instead of full images for faster processing on mobile
     const imageContents = await Promise.all(
       photos.map(async (photo: any, index: number) => {
         try {
-          const { base64, mediaType } = await urlToBase64(photo.url);
+          // Use thumbnail if available (much smaller, faster for mobile), fallback to full URL
+          const imageUrl = photo.thumbnail || photo.url;
+          const { base64, mediaType } = await urlToBase64(imageUrl);
           return {
             type: 'image' as const,
             source: {
@@ -202,10 +210,23 @@ Format your response as JSON with these exact keys:
       console.error('Error generating estimate:', error);
     }
 
+    // Provide more helpful error messages for common issues
+    let errorMessage = 'An error occurred';
+
+    if (error.message) {
+      if (error.message.includes('timeout') || error.message.includes('aborted')) {
+        errorMessage = 'Request timed out - please try with fewer or smaller photos';
+      } else if (error.message.includes('too large')) {
+        errorMessage = 'One or more photos are too large - please use smaller images';
+      } else if (process.env.NODE_ENV !== 'production') {
+        errorMessage = error.message;
+      }
+    }
+
     return NextResponse.json(
       {
         error: 'Failed to generate estimate',
-        details: process.env.NODE_ENV !== 'production' ? error.message : 'An error occurred'
+        details: errorMessage
       },
       { status: 500 }
     );

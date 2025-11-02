@@ -72,12 +72,18 @@ export default function QuotePage() {
     setIsGenerating(true);
 
     try {
-      // Call AI estimation API
+      // Call AI estimation API with timeout
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 25000); // 25 second client timeout
+
       const estimateRes = await fetch('/api/estimate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ photos: data.photos, notes: data.notes }),
+        signal: controller.signal,
       });
+
+      clearTimeout(timeout);
 
       if (!estimateRes.ok) {
         const errorData = await estimateRes.json();
@@ -102,7 +108,14 @@ export default function QuotePage() {
     } catch (error: any) {
       console.error('Error submitting quote:', error);
       setIsGenerating(false);
-      alert(`Failed to generate quote: ${error.message}`);
+
+      // Provide helpful error messages
+      let errorMessage = error.message || 'An error occurred';
+      if (error.name === 'AbortError') {
+        errorMessage = 'Request timed out - please try with fewer or smaller photos';
+      }
+
+      alert(`Failed to generate quote: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
