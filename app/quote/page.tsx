@@ -10,6 +10,7 @@ import DateStep from '@/components/quote/DateStep';
 import PhotoUploadStep from '@/components/quote/PhotoUploadStep';
 import ContactStep from '@/components/quote/ContactStep';
 import EstimateResult from '@/components/quote/EstimateResult';
+import LoadingAnimation from '@/components/quote/LoadingAnimation';
 
 type FormData = {
   propertyType: string;
@@ -48,6 +49,7 @@ const stepLabels = ['Property', 'Junk Type', 'Location', 'Date', 'Photos', 'Cont
 export default function QuotePage() {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(false);
   const [estimate, setEstimate] = useState<Estimate | null>(null);
   const methods = useForm<FormData>({
     defaultValues: {
@@ -67,6 +69,7 @@ export default function QuotePage() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
+    setIsGenerating(true);
 
     try {
       // Call AI estimation API
@@ -94,9 +97,11 @@ export default function QuotePage() {
         }),
       });
 
+      setIsGenerating(false);
       setStep(7); // Show results
     } catch (error: any) {
       console.error('Error submitting quote:', error);
+      setIsGenerating(false);
       alert(`Failed to generate quote: ${error.message}`);
     } finally {
       setIsSubmitting(false);
@@ -176,15 +181,18 @@ export default function QuotePage() {
 
         {/* Form Content */}
         <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xl">
-          <FormProvider {...methods}>
-            <form onSubmit={methods.handleSubmit(onSubmit)}>
-              {step === 1 && <PropertyTypeStep />}
-              {step === 2 && <JunkTypeStep />}
-              {step === 3 && <LocationStep />}
-              {step === 4 && <DateStep />}
-              {step === 5 && <PhotoUploadStep />}
-              {step === 6 && <ContactStep />}
-              {step === 7 && estimate && <EstimateResult estimate={estimate} />}
+          {isGenerating ? (
+            <LoadingAnimation />
+          ) : (
+            <FormProvider {...methods}>
+              <form onSubmit={methods.handleSubmit(onSubmit)}>
+                {step === 1 && <PropertyTypeStep />}
+                {step === 2 && <JunkTypeStep />}
+                {step === 3 && <LocationStep />}
+                {step === 4 && <DateStep />}
+                {step === 5 && <PhotoUploadStep />}
+                {step === 6 && <ContactStep />}
+                {step === 7 && estimate && <EstimateResult estimate={estimate} />}
 
               {/* Navigation Buttons */}
               {step < 7 && (
@@ -228,6 +236,7 @@ export default function QuotePage() {
               )}
             </form>
           </FormProvider>
+          )}
         </div>
       </div>
     </div>
