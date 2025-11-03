@@ -27,11 +27,11 @@ export default function PhotoUploadStep() {
   // Compress image before upload (dramatically speeds up mobile uploads)
   const compressImage = async (file: File): Promise<File> => {
     const options = {
-      maxSizeMB: 0.5, // Target 500KB max
-      maxWidthOrHeight: 1920, // Max dimension
+      maxSizeMB: 0.3, // Target 300KB max (more aggressive for faster uploads)
+      maxWidthOrHeight: 1280, // Max dimension (plenty for AI analysis)
       useWebWorker: true, // Use Web Worker for better performance
       fileType: 'image/jpeg', // Convert to JPEG for better compression
-      initialQuality: 0.85, // 85% quality
+      initialQuality: 0.8, // 80% quality (still excellent, faster upload)
     };
 
     try {
@@ -56,7 +56,7 @@ export default function PhotoUploadStep() {
           uploadPreset,
           folder: 'junk-removal-leads',
           multiple: true,
-          maxFiles: 10,
+          maxFiles: 3, // Limit to 3 photos for faster uploads
           clientAllowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
           maxFileSize: 10000000, // 10MB (before compression)
           sources: ['local', 'camera'],
@@ -118,10 +118,10 @@ export default function PhotoUploadStep() {
   return (
     <div>
       <h2 className="font-display text-2xl font-semibold text-slate-900">
-        Upload photos of the junk
+        Upload 2-3 photos of the junk
       </h2>
       <p className="mt-2 text-sm text-slate-600">
-        Photos help us provide an accurate estimate. Upload multiple angles if possible.
+        Just 2-3 clear photos are perfect for our AI to give you an accurate estimate.
       </p>
 
       <div className="mt-6">
@@ -243,13 +243,13 @@ export default function PhotoUploadStep() {
           </svg>
           <div className="ml-3">
             <p className="text-sm font-medium text-blue-900">
-              Tips for better photos:
+              Tips for best results:
             </p>
             <ul className="mt-2 text-sm text-blue-800 space-y-1">
-              <li>• Take photos from multiple angles</li>
-              <li>• Include surrounding area for context</li>
-              <li>• Make sure items are clearly visible</li>
-              <li>• More photos = more accurate estimate</li>
+              <li>• 2-3 photos is perfect - quality over quantity</li>
+              <li>• Show items from different angles</li>
+              <li>• Include surrounding area for size reference</li>
+              <li>• Make sure items are clearly visible and well-lit</li>
             </ul>
           </div>
         </div>
