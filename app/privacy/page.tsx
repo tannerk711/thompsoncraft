@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
         <Link
           href="/"
-          className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500 mb-8"
+          className="inline-flex items-center text-sm font-medium text-blue-700 hover:text-blue-600 mb-8"
         >
           ← Back to Home
         </Link>

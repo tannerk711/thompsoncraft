@@ -31,15 +31,15 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             {/* Social Proof Badge */}
-            <div className="mb-8 inline-flex items-center rounded-full bg-bronze/20 backdrop-blur-md px-4 py-2 text-sm font-medium text-cream border border-bronze">
-              <svg className="w-5 h-5 mr-2 text-bronze" fill="currentColor" viewBox="0 0 20 20">
+            <div className="mb-8 inline-flex items-center rounded-full bg-charcoal/40 backdrop-blur-md px-4 py-2 text-sm font-medium text-cream border-2 border-bronze-light shadow-lg">
+              <svg className="w-5 h-5 mr-2 text-bronze-light" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
               500+ Treasure Valley Cleanouts Completed
             </div>
 
             <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl leading-tight">
-              <span className="block text-bronze">Professional Junk Removal</span>
+              <span className="block text-bronze-light drop-shadow-lg">Professional Junk Removal</span>
               <span className="block text-3xl sm:text-5xl mt-4 text-cream">with White-Glove Service</span>
             </h1>
             <p className="mt-8 text-xl leading-8 text-slate-200 max-w-2xl mx-auto">
@@ -174,7 +174,7 @@ export default function Home() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/75 to-charcoal/30 group-hover:from-charcoal group-hover:to-charcoal/80 transition-all"></div>
                 </div>
 
                 {/* Content */}
@@ -185,10 +185,10 @@ export default function Home() {
                   </div>
 
                   {/* Category Name */}
-                  <h3 className="text-2xl font-bold text-white mb-3">{category.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">{category.name}</h3>
 
                   {/* Description */}
-                  <p className="text-slate-200 leading-relaxed">{category.description}</p>
+                  <p className="text-slate-100 leading-relaxed drop-shadow-md">{category.description}</p>
                 </div>
               </div>
             ))}

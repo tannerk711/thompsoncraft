@@ -12,8 +12,8 @@
 
   /* Bronze/Gold - Luxury accent */
   --color-bronze: 43 74% 39%;
-  --color-bronze-light: 43 74% 49%;
-  --color-bronze-dark: 43 74% 29%;
+  --color-bronze-light: 43 74% 55%; /* Lighter for better contrast on dark backgrounds */
+  --color-bronze-dark: 43 74% 25%; /* Darker for better contrast on light backgrounds */
 
   /* Cream - Warm neutral backgrounds */
   --color-cream: 40 20% 96%;

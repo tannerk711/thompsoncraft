@@ -241,19 +241,19 @@ export default function PhotoUploadStep() {
               </p>
               <ul className="text-sm text-slate-700 space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-bronze font-bold">✓</span>
+                  <span className="text-bronze-dark font-bold">✓</span>
                   <span><strong>2-3 photos is perfect</strong> - Quality over quantity for faster processing</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-bronze font-bold">✓</span>
+                  <span className="text-bronze-dark font-bold">✓</span>
                   <span><strong>Show different angles</strong> - Helps our AI understand volume accurately</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-bronze font-bold">✓</span>
+                  <span className="text-bronze-dark font-bold">✓</span>
                   <span><strong>Include size reference</strong> - Nearby door frame, person, or furniture helps</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-bronze font-bold">✓</span>
+                  <span className="text-bronze-dark font-bold">✓</span>
                   <span><strong>Good lighting matters</strong> - Natural daylight or bright room lighting works best</span>
                 </li>
               </ul>
