@@ -44,8 +44,7 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
       </p>
 
       {/* Main Glassmorphic Card */}
-      <div className="mt-8 relative rounded-2xl bg-gradient-to-br from-bronze-dark via-bronze to-bronze-light p-[2px] shadow-2xl shadow-bronze/50">
-        <div className="rounded-2xl bg-charcoal/30 backdrop-blur-md p-8 text-white">
+      <div className="mt-8 relative rounded-2xl bg-bronze p-8 shadow-2xl text-white">
           {/* AI Estimate Badge */}
           <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-xs font-medium">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -67,7 +66,7 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
           </div>
 
           {/* What's Included */}
-          <div className="mt-6 rounded-xl bg-white/10 backdrop-blur-sm p-4 text-left">
+          <div className="mt-6 rounded-xl bg-charcoal/20 p-4 text-left">
             <p className="text-sm font-semibold mb-3">What's included:</p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
@@ -90,7 +89,6 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
               </li>
             </ul>
           </div>
-        </div>
       </div>
 
       {/* Detected Items Section */}
