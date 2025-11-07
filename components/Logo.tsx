@@ -15,7 +15,7 @@ const sizeMap = {
 
 export default function Logo({ variant = 'light', size = 'md', href = '/' }: LogoProps) {
   const dimensions = sizeMap[size];
-  const logoSrc = '/junk yard gentlemen logo.svg';
+  const logoSrc = '/junkyard-gentlemen-logo.svg';
 
   const logoImage = (
     <Image
