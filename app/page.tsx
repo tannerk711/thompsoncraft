@@ -18,7 +18,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero-truck.jpg"
-            alt="Junk Hauler Truck in Treasure Valley Idaho"
+            alt="Professional movers loading furniture onto junk removal truck with mountain backdrop in Treasure Valley Idaho"
             fill
             priority
             className="object-cover"
