@@ -51,7 +51,7 @@ export default function Home() {
                 href="/quote"
                 className="w-full sm:w-auto rounded-lg bg-bronze px-10 py-4 text-lg font-semibold text-white shadow-lg hover:bg-bronze/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze transition-all hover:shadow-xl hover:scale-105"
               >
-                Get AI-Powered Quote
+                Get Free Instant Quote
               </Link>
               <a
                 href="tel:+18445435865"
@@ -262,7 +262,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="mt-6 text-sm text-slate-600 italic">
-                  Volumes are estimates of compressed truck space. Your AI quote will provide exact pricing based on your photos.
+                  Volumes are estimates of compressed truck space. Your instant quote will provide exact pricing based on your photos.
                 </p>
               </div>
             </div>
@@ -389,7 +389,7 @@ export default function Home() {
               Ready for Stress-Free, Professional Service?
             </h2>
             <p className="mt-6 text-xl leading-8 text-white max-w-2xl mx-auto">
-              Get an instant, AI-powered quote in minutes. Our advanced system analyzes your photos to provide accurate, transparent pricing.
+              Get a free instant quote in minutes. Our advanced photo analysis system provides accurate, transparent pricing.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -555,7 +555,7 @@ const detailedServices = [
 const pricingSteps = [
   {
     title: 'Upload Photos',
-    description: 'Take 2-3 photos of your junk. Our AI analyzes volume and provides instant estimates.',
+    description: 'Take 2-3 photos of your junk. Our system analyzes volume and provides instant estimates.',
   },
   {
     title: 'Get Instant Quote',

@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Introduction</h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Junk Yard Gentlemen ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services, including our AI-powered quote system.
+              Junk Yard Gentlemen ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services, including our instant quote system.
             </p>
             <p className="text-slate-700 leading-relaxed">
               By using our website and services, you agree to the collection and use of information in accordance with this policy.
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
               We use the collected information for the following purposes:
             </p>
             <ul className="list-disc pl-6 mb-4 text-slate-700 space-y-2">
-              <li><strong>Quote Generation:</strong> Processing your photos through our AI system (powered by Anthropic Claude) to provide volume estimates and pricing</li>
+              <li><strong>Quote Generation:</strong> Processing your photos through our automated analysis system to provide volume estimates and pricing</li>
               <li><strong>Service Delivery:</strong> Scheduling junk removal services and communicating with you</li>
               <li><strong>Customer Support:</strong> Responding to inquiries and providing assistance</li>
               <li><strong>Business Operations:</strong> Managing our CRM system and internal records</li>
@@ -80,10 +80,9 @@ export default function PrivacyPolicy() {
               <a href="https://cloudinary.com/privacy" className="text-blue-600 hover:text-blue-500">https://cloudinary.com/privacy</a>
             </p>
 
-            <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-6">4.2 Anthropic Claude AI</h3>
+            <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-6">4.2 Third-Party Analysis Services</h3>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Your photos and notes are analyzed by Anthropic's Claude AI to generate volume estimates. Anthropic processes this data in accordance with their privacy policy available at{' '}
-              <a href="https://www.anthropic.com/privacy" className="text-blue-600 hover:text-blue-500">https://www.anthropic.com/privacy</a>
+              Your photos and notes are processed by third-party analysis services to generate volume estimates and pricing information.
             </p>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-6">4.3 Go High Level (via Zapier)</h3>

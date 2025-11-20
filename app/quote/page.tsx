@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
@@ -12,6 +12,14 @@ import PhotoUploadStep from '@/components/quote/PhotoUploadStep';
 import ContactStep from '@/components/quote/ContactStep';
 import EstimateResult from '@/components/quote/EstimateResult';
 import LoadingAnimation from '@/components/quote/LoadingAnimation';
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, any>) => void;
+    dataLayer?: any[];
+  }
+}
 
 type FormData = {
   propertyType: string;
@@ -75,7 +83,7 @@ export default function QuotePage() {
     setIsGenerating(true);
 
     try {
-      // Call AI estimation API with timeout
+      // Call estimation API with timeout
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 25000); // 25 second client timeout
 
@@ -169,6 +177,18 @@ export default function QuotePage() {
   const prevStep = () => {
     setStep(step - 1);
   };
+
+  // Track conversion when user reaches the success page (step 7)
+  useEffect(() => {
+    if (step === 7) {
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-17709955283/hYKCCL-av7wbENPx4fxB'
+        });
+      }
+    }
+  }, [step]);
 
   return (
     <div className="min-h-screen bg-cream py-8">

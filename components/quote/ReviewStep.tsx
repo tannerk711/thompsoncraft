@@ -91,7 +91,7 @@ export default function ReviewStep() {
           </svg>
           <div className="ml-3">
             <p className="text-sm font-medium text-blue-900">
-              Our AI will analyze your photos to provide an accurate estimate in seconds!
+              Our system will analyze your photos to provide an accurate estimate in seconds!
             </p>
           </div>
         </div>

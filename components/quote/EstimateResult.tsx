@@ -40,20 +40,20 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
         Here's Your Instant Quote!
       </h2>
       <p className="mt-2 text-slate-600">
-        Our AI has analyzed your photos and generated an estimate. We'll contact you shortly to confirm details.
+        Our Junk Estimate Wizards have analyzed your photos and generated an estimate. We'll contact you shortly to confirm details.
       </p>
 
       {/* Main Glassmorphic Card */}
       <div className="mt-8 relative rounded-2xl bg-bronze p-8 shadow-2xl text-white">
-          {/* AI Estimate Badge */}
+          {/* Instant Estimate Badge */}
           <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-xs font-medium">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
             </svg>
-            AI Estimate
+            Instant Estimate
           </div>
 
-          <p className="text-sm font-medium text-white">Your AI-Powered Estimate</p>
+          <p className="text-sm font-medium text-white">Your Instant Estimate</p>
 
           {/* Price Display */}
           <div className="mt-2">
@@ -131,11 +131,11 @@ export default function EstimateResult({ estimate }: EstimateResultProps) {
         </div>
       )}
 
-      {/* AI Analysis */}
+      {/* Estimate Analysis */}
       <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6 text-left shadow-md">
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-display text-lg font-semibold text-slate-900">
-            AI Analysis
+            Estimate Breakdown
           </h3>
           <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium ${
             estimate.confidence === 'High' ? 'bg-green-100 text-green-700' :

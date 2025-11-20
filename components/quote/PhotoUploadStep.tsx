@@ -28,7 +28,7 @@ export default function PhotoUploadStep() {
   const compressImage = async (file: File): Promise<File> => {
     const options = {
       maxSizeMB: 0.3, // Target 300KB max (more aggressive for faster uploads)
-      maxWidthOrHeight: 1280, // Max dimension (plenty for AI analysis)
+      maxWidthOrHeight: 1280, // Max dimension (plenty for analysis)
       useWebWorker: true, // Use Web Worker for better performance
       fileType: 'image/jpeg', // Convert to JPEG for better compression
       initialQuality: 0.8, // 80% quality (still excellent, faster upload)
@@ -121,7 +121,7 @@ export default function PhotoUploadStep() {
         Upload 2-3 photos of your items
       </h2>
       <p className="mt-2 text-sm text-slate-600">
-        Our AI-powered system analyzes your photos to provide accurate, transparent pricing. Just 2-3 clear photos are perfect!
+        Our instant quote system analyzes your photos to provide accurate, transparent pricing. Just 2-3 clear photos are perfect!
       </p>
 
       <div className="mt-6">
@@ -246,7 +246,7 @@ export default function PhotoUploadStep() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-bronze-dark font-bold">✓</span>
-                  <span><strong>Show different angles</strong> - Helps our AI understand volume accurately</span>
+                  <span><strong>Show different angles</strong> - Helps us understand volume accurately</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-bronze-dark font-bold">✓</span>

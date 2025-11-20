@@ -187,9 +187,9 @@ Return JSON:
         } else {
           // Log the response in development for debugging
           if (process.env.NODE_ENV !== 'production') {
-            console.error('Failed to parse AI response:', responseText);
+            console.error('Failed to parse estimation response:', responseText);
           }
-          throw new Error('Failed to parse AI response');
+          throw new Error('Failed to parse estimation response');
         }
       }
     }

@@ -15,7 +15,7 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   title: "Junkyard Gentlemen | Premium Junk Removal in Boise & Treasure Valley",
-  description: "Professional, white-glove junk removal service in Boise and Treasure Valley. Stress-free, respectful service with eco-friendly disposal. AI-powered instant quotes. Same-day service available. Licensed & insured.",
+  description: "Professional, white-glove junk removal service in Boise and Treasure Valley. Stress-free, respectful service with eco-friendly disposal. Free instant quotes. Same-day service available. Licensed & insured.",
   keywords: "junk removal Boise, Treasure Valley hauling, Meridian junk removal, Eagle furniture removal, eco-friendly disposal Idaho, estate cleanout Boise, construction debris removal, professional junk hauling, white-glove service",
   openGraph: {
     title: "Junkyard Gentlemen | Professional Junk Removal Boise",
@@ -37,6 +37,18 @@ export default function RootLayout({
           src="https://upload-widget.cloudinary.com/global/all.js"
           strategy="beforeInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17709955283"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17709955283');
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${lexend.variable} antialiased font-sans`}

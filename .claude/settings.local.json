@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"c:\\Users\\tanne\\Downloads\\From Scratch Junk Site\\fromscratch-site-build-junk\\nextjs-junk-hauler-1\\app\" /b)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate landing page headline to emphasize Boise location\n\nChanged the hero headline from \"Professional Junk Removal with White-Glove Service\" to \"Professional Boise Junk Removal Service\" to better emphasize the geographic focus and improve local SEO.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

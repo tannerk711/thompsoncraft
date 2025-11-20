@@ -293,6 +293,6 @@ This rebrand transforms the site from a generic junk removal service into a prem
 2. ✅ Local Expertise (Treasure Valley-specific knowledge)
 3. ✅ Pricing Transparency (volume-based, educational)
 4. ✅ Eco-Responsibility (80% diversion, local partnerships)
-5. ✅ Technology (AI-powered quotes - unique in Boise market)
+5. ✅ Technology (Instant photo quotes - unique in Boise market)
 
 The site is now ready for deployment with a strong, cohesive brand identity that speaks directly to Treasure Valley residents and businesses.
