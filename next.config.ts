@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: https://res.cloudinary.com",
               "font-src 'self' data:",
               "connect-src 'self' https://api.anthropic.com https://res.cloudinary.com https://api.cloudinary.com",
-              "frame-src https://widget.cloudinary.com https://upload-widget.cloudinary.com",
+              "frame-src https://widget.cloudinary.com https://upload-widget.cloudinary.com https://www.google.com",
             ].join('; '),
           },
         ],

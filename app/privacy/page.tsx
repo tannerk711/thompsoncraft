@@ -1,16 +1,18 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Junkyard Gentlemen',
+  description:
+    'Learn how Junkyard Gentlemen collects, uses, and protects your personal information. Our commitment to your privacy.',
+  alternates: {
+    canonical: 'https://junkhaulerboise.com/privacy',
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-24">
       <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
-        <Link
-          href="/"
-          className="inline-flex items-center text-sm font-medium text-blue-700 hover:text-blue-600 mb-8"
-        >
-          ← Back to Home
-        </Link>
-
         <h1 className="font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl mb-6">
           Privacy Policy
         </h1>
@@ -198,20 +200,6 @@ export default function PrivacyPolicy() {
           </section>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <div className="flex justify-center gap-8 text-sm text-slate-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <Link href="/quote" className="hover:text-blue-600">Get Quote</Link>
-            <Link href="/privacy" className="font-semibold text-slate-900">Privacy Policy</Link>
-          </div>
-          <p className="text-center text-sm text-slate-600 mt-4">
-            &copy; 2025 Junk Yard Gentlemen. Licensed and Insured.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

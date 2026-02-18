@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import Link from 'next/link';
-import Logo from '@/components/Logo';
 import PropertyTypeStep from '@/components/quote/PropertyTypeStep';
 import JunkTypeStep from '@/components/quote/JunkTypeStep';
 import LocationStep from '@/components/quote/LocationStep';
@@ -191,10 +190,10 @@ export default function QuotePage() {
   }, [step]);
 
   return (
-    <div className="min-h-screen bg-cream py-8">
+    <div className="min-h-screen bg-cream pt-24 pb-8">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        {/* Header */}
-        <div className="mb-8 flex items-center justify-between">
+        {/* Breadcrumb */}
+        <div className="mb-8">
           <Link
             href="/"
             className="inline-flex items-center text-sm font-medium text-bronze hover:opacity-80 transition-colors"
@@ -214,7 +213,6 @@ export default function QuotePage() {
             </svg>
             Back to Home
           </Link>
-          <Logo variant="light" size="sm" href="/" />
         </div>
 
         {/* Progress Bar */}
