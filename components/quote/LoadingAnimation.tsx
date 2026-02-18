@@ -58,7 +58,7 @@ export default function LoadingAnimation() {
         {/* Header */}
         <div className="mb-12">
           <h2 className="font-display text-3xl font-bold text-slate-900 mb-3">
-            Hang tight! Our Junk Estimate Wizards are working their magic ✨
+            Hang tight! Our Junk Estimate Wizards are working their magic
           </h2>
           <p className="text-slate-600">
             We're analyzing your photos to give you the most accurate estimate

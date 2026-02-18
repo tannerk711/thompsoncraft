@@ -3,6 +3,7 @@
 import { useFormContext } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 import imageCompression from 'browser-image-compression';
+import { Camera, Sofa, Ruler, Lightbulb } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -264,22 +265,30 @@ export default function PhotoUploadStep() {
         {/* Example Photos Section */}
         <div className="rounded-lg bg-emerald-50 border-2 border-emerald-200 p-5">
           <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 text-3xl">📸</div>
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+              <Camera className="w-5 h-5 text-emerald-600" />
+            </div>
             <div className="flex-1">
               <p className="text-sm font-bold text-emerald-900 mb-2">
                 Great Photos Look Like This:
               </p>
               <div className="grid grid-cols-3 gap-2 mb-3">
                 <div className="bg-white rounded border border-emerald-300 p-2 text-center">
-                  <div className="text-2xl mb-1">🛋️</div>
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-1">
+                    <Sofa className="w-4 h-4 text-emerald-600" />
+                  </div>
                   <p className="text-xs text-emerald-800 font-medium">Full View</p>
                 </div>
                 <div className="bg-white rounded border border-emerald-300 p-2 text-center">
-                  <div className="text-2xl mb-1">📐</div>
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-1">
+                    <Ruler className="w-4 h-4 text-emerald-600" />
+                  </div>
                   <p className="text-xs text-emerald-800 font-medium">With Context</p>
                 </div>
                 <div className="bg-white rounded border border-emerald-300 p-2 text-center">
-                  <div className="text-2xl mb-1">💡</div>
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-1">
+                    <Lightbulb className="w-4 h-4 text-emerald-600" />
+                  </div>
                   <p className="text-xs text-emerald-800 font-medium">Well Lit</p>
                 </div>
               </div>

@@ -1,6 +1,36 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/components/Logo';
+import {
+  Crown,
+  Sparkles,
+  Users,
+  ShieldCheck,
+  Clock,
+  HeartHandshake,
+  Building2,
+  Snowflake,
+  TrendingUp,
+  HardHat,
+  Home as HomeIcon,
+  Building,
+  Package,
+  Sofa,
+  Plug,
+  TreePine,
+  Bath,
+  Monitor,
+  Store,
+  UtensilsCrossed,
+  Recycle,
+  Handshake,
+  Shirt,
+  Factory,
+  Smartphone,
+  Armchair,
+  Gift,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -106,8 +136,8 @@ export default function Home() {
                 key={index}
                 className="relative rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-md hover:shadow-xl hover-bronze-border transition-smooth hover-lift group"
               >
-                <div className="w-14 h-14 rounded-full bg-bronze/10 flex items-center justify-center mb-6 group-hover:bg-bronze transition-colors">
-                  <span className="text-3xl group-hover:scale-110 transition-transform">{reason.icon}</span>
+                <div className="w-14 h-14 rounded-full bg-cream-dark flex items-center justify-center mb-6 group-hover:bg-bronze transition-colors">
+                  <reason.icon className="w-7 h-7 text-bronze group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-charcoal mb-3">{reason.title}</h3>
                 <p className="text-slate-700 leading-relaxed">{reason.description}</p>
@@ -134,8 +164,8 @@ export default function Home() {
                   key={index}
                   className="flex items-start gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-bronze flex items-center justify-center">
-                    <span className="text-2xl">{item.icon}</span>
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-bronze flex items-center justify-center">
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
@@ -173,7 +203,7 @@ export default function Home() {
                   />
                   {/* Icon Badge - positioned in top left */}
                   <div className="absolute top-6 left-6 w-16 h-16 rounded-full bg-bronze flex items-center justify-center shadow-lg z-10">
-                    <span className="text-3xl">{category.icon}</span>
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
 
@@ -203,7 +233,9 @@ export default function Home() {
                 key={index}
                 className="flex items-start gap-3 p-4 rounded-lg bg-white border border-slate-200 hover:border-bronze hover:shadow-md transition-all"
               >
-                <span className="text-2xl flex-shrink-0">{service.icon}</span>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream-dark flex items-center justify-center">
+                  <service.icon className="w-5 h-5 text-bronze" />
+                </div>
                 <div>
                   <h4 className="font-bold text-charcoal text-sm">{service.name}</h4>
                   <p className="text-xs text-slate-600 mt-1">{service.items}</p>
@@ -282,19 +314,25 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-200 hover-lift transition-smooth">
-              <div className="text-6xl mb-4">♻️</div>
+              <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                <Recycle className="w-8 h-8 text-emerald-600" />
+              </div>
               <div className="text-5xl font-bold text-emerald-600 mb-2">80%</div>
               <p className="text-lg font-semibold text-charcoal">Recycled or Donated</p>
               <p className="mt-2 text-sm text-slate-600">We divert 4 out of 5 items from landfills</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 hover-lift transition-smooth">
-              <div className="text-6xl mb-4">🤝</div>
+              <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                <Handshake className="w-8 h-8 text-blue-600" />
+              </div>
               <div className="text-5xl font-bold text-blue-600 mb-2">12+</div>
               <p className="text-lg font-semibold text-charcoal">Local Partners</p>
               <p className="mt-2 text-sm text-slate-600">Charities, recyclers, and donation centers</p>
             </div>
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-bronze/10 to-white border-2 border-bronze/30 hover-lift transition-smooth">
-              <div className="text-6xl mb-4">🌲</div>
+              <div className="w-16 h-16 rounded-full bg-bronze/10 flex items-center justify-center mx-auto mb-4">
+                <TreePine className="w-8 h-8 text-bronze" />
+              </div>
               <div className="text-5xl font-bold text-bronze mb-2">500+</div>
               <p className="text-lg font-semibold text-charcoal">Tons Diverted</p>
               <p className="mt-2 text-sm text-slate-600">Kept out of Idaho landfills in 2024</p>
@@ -306,7 +344,9 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {ecoPartners.map((partner, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl mb-2">{partner.icon}</div>
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-2 shadow-sm">
+                    <partner.icon className="w-6 h-6 text-bronze" />
+                  </div>
                   <p className="text-sm font-medium text-slate-700">{partner.name}</p>
                 </div>
               ))}
@@ -437,67 +477,66 @@ export default function Home() {
 
 // Data Constants
 
-const whyChooseUs = [
+const whyChooseUs: Array<{ icon: LucideIcon; title: string; description: string }> = [
   {
-    icon: '🎩',
+    icon: Crown,
     title: 'Respectful Service',
     description: 'We treat your property like our own. No property damage, no mess left behind, and always courteous service.',
   },
   {
-    icon: '🧹',
+    icon: Sparkles,
     title: 'Spotless Cleanup',
     description: 'We sweep and clean the area after removal. You won\'t even know we were there (except your junk will be gone).',
   },
   {
-    icon: '👔',
+    icon: Users,
     title: 'Professional Team',
     description: 'Uniformed, background-checked professionals. Not just anyone with a truck - actual trained specialists.',
   },
   {
-    icon: '🔒',
+    icon: ShieldCheck,
     title: 'Trustworthy & Insured',
     description: 'Fully licensed and insured with comprehensive liability coverage. Your property is protected.',
   },
   {
-    icon: '⏰',
+    icon: Clock,
     title: 'On-Time, Every Time',
     description: 'We respect your schedule. Arrive when promised, finish when estimated. No surprises.',
   },
   {
-    icon: '🤝',
+    icon: HeartHandshake,
     title: 'Community First',
     description: 'Locally owned and operated. We donate usable items to Treasure Valley charities and families in need.',
   },
 ];
 
-const localExpertise = [
+const localExpertise: Array<{ icon: LucideIcon; title: string; description: string }> = [
   {
-    icon: '🏘️',
+    icon: Building2,
     title: 'HOA Compliance Experts',
     description: 'We know Eagle and Meridian HOA rules inside out. Proper disposal documentation and scheduling to keep you compliant.',
   },
   {
-    icon: '❄️',
+    icon: Snowflake,
     title: 'Seasonal Service',
     description: 'From spring yard cleanup to winter storage unit clearouts, we handle Idaho\'s unique seasonal needs year-round.',
   },
   {
-    icon: '📈',
+    icon: TrendingUp,
     title: 'Growth & Moving Specialists',
     description: 'Boise is booming! We help new residents settle in and departing neighbors move out smoothly.',
   },
   {
-    icon: '🏗️',
+    icon: HardHat,
     title: 'New Construction Ready',
     description: 'Supporting the Nampa and Meridian building boom with fast construction debris removal and site cleanup.',
   },
 ];
 
-// New Photo-Based Service Categories
-const serviceCategories = [
+const serviceCategories: Array<{ name: string; icon: LucideIcon; image: string; items: string[] }> = [
   {
     name: 'Residential Junk Removal',
-    icon: '🏠',
+    icon: HomeIcon,
     image: '/residential-cleanout.jpg',
     items: [
       'Appliances (refrigerators, washers, dryers)',
@@ -511,7 +550,7 @@ const serviceCategories = [
   },
   {
     name: 'Commercial Junk Removal',
-    icon: '🏢',
+    icon: Building,
     image: '/commercial-office.jpg',
     items: [
       'Office furniture and desks',
@@ -525,7 +564,7 @@ const serviceCategories = [
   },
   {
     name: 'Storage Unit Cleanouts',
-    icon: '📦',
+    icon: Package,
     image: '/storage-unit.jpg',
     items: [
       'Full storage unit cleanouts',
@@ -539,17 +578,16 @@ const serviceCategories = [
   },
 ];
 
-// Detailed Service List
-const detailedServices = [
-  { icon: '🛋️', name: 'Furniture Removal', items: 'Sofas, beds, dressers' },
-  { icon: '🔌', name: 'Appliance Haul-Away', items: 'Fridges, washers, dryers' },
-  { icon: '🏗️', name: 'Construction Debris', items: 'Drywall, lumber, flooring' },
-  { icon: '🌳', name: 'Yard Waste', items: 'Branches, stumps, lawn debris' },
-  { icon: '🏠', name: 'Estate Cleanouts', items: 'Full property cleanouts' },
-  { icon: '🛁', name: 'Hot Tubs & Spas', items: 'Hot tub removal & disposal' },
-  { icon: '📺', name: 'Electronics', items: 'TVs, computers, e-waste' },
-  { icon: '🪟', name: 'Retail Fixtures', items: 'Shelving, displays, counters' },
-  { icon: '🍽️', name: 'Restaurant Equipment', items: 'Ovens, fridges, prep tables' },
+const detailedServices: Array<{ icon: LucideIcon; name: string; items: string }> = [
+  { icon: Sofa, name: 'Furniture Removal', items: 'Sofas, beds, dressers' },
+  { icon: Plug, name: 'Appliance Haul-Away', items: 'Fridges, washers, dryers' },
+  { icon: HardHat, name: 'Construction Debris', items: 'Drywall, lumber, flooring' },
+  { icon: TreePine, name: 'Yard Waste', items: 'Branches, stumps, lawn debris' },
+  { icon: HomeIcon, name: 'Estate Cleanouts', items: 'Full property cleanouts' },
+  { icon: Bath, name: 'Hot Tubs & Spas', items: 'Hot tub removal & disposal' },
+  { icon: Monitor, name: 'Electronics', items: 'TVs, computers, e-waste' },
+  { icon: Store, name: 'Retail Fixtures', items: 'Shelving, displays, counters' },
+  { icon: UtensilsCrossed, name: 'Restaurant Equipment', items: 'Ovens, fridges, prep tables' },
 ];
 
 const pricingSteps = [
@@ -582,15 +620,15 @@ const volumeGuide = [
   { item: 'Yard Waste (pickup truck load)', volume: '3-4 cubic yards' },
 ];
 
-const ecoPartners = [
-  { icon: '🏪', name: 'Habitat ReStore' },
-  { icon: '👕', name: 'Goodwill' },
-  { icon: '♻️', name: 'Treasure Valley Recycling' },
-  { icon: '🏭', name: 'Ada County Landfill' },
-  { icon: '📱', name: 'E-Waste Recyclers' },
-  { icon: '🪑', name: 'Furniture Banks' },
-  { icon: '🎁', name: 'Local Charities' },
-  { icon: '🌲', name: 'Wood Recycling' },
+const ecoPartners: Array<{ icon: LucideIcon; name: string }> = [
+  { icon: Store, name: 'Habitat ReStore' },
+  { icon: Shirt, name: 'Goodwill' },
+  { icon: Recycle, name: 'Treasure Valley Recycling' },
+  { icon: Factory, name: 'Ada County Landfill' },
+  { icon: Smartphone, name: 'E-Waste Recyclers' },
+  { icon: Armchair, name: 'Furniture Banks' },
+  { icon: Gift, name: 'Local Charities' },
+  { icon: TreePine, name: 'Wood Recycling' },
 ];
 
 const serviceAreas = [
