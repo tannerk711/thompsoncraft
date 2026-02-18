@@ -210,7 +210,7 @@ export default async function LocationPage({ params }: Props) {
           <ScrollReveal delay={0.1}>
             <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(location.city + ', Idaho')}&zoom=12`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${encodeURIComponent(location.city + ', Idaho')}&zoom=12`}
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
