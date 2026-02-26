@@ -42,16 +42,16 @@ import { siteConfig } from '@/data/site';
 import { getTestimonialsByIds } from '@/data/testimonials';
 
 export const metadata: Metadata = {
-  title: 'Junkyard Gentlemen | Professional Junk Removal in Boise & Treasure Valley',
+  title: 'Thompson Craft LLC | Professional Junk Removal in Rio Rancho & Central New Mexico',
   description:
-    'Professional junk removal in Boise and the Treasure Valley. Same-day service, transparent pricing at $46/cubic yard, eco-friendly disposal. Free instant photo quotes. Licensed & insured.',
+    'Professional junk removal in Rio Rancho and Central New Mexico. Same-day service, transparent pricing at $46/cubic yard, eco-friendly disposal. Free instant photo quotes. Licensed & insured.',
   alternates: {
     canonical: siteConfig.baseUrl,
   },
   openGraph: {
-    title: 'Junkyard Gentlemen | Professional Junk Removal Boise',
+    title: 'Thompson Craft LLC | Professional Junk Removal Rio Rancho',
     description:
-      'Professional, stress-free junk removal with white-glove service throughout the Treasure Valley. Eco-friendly, respectful, and reliable.',
+      'Professional, stress-free junk removal with white-glove service throughout Central New Mexico. Eco-friendly, respectful, and reliable.',
     url: siteConfig.baseUrl,
     siteName: siteConfig.name,
     type: 'website',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.baseUrl}/hero-truck.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Junkyard Gentlemen - Professional Junk Removal in Boise',
+        alt: 'Thompson Craft LLC - Professional Junk Removal in Rio Rancho',
       },
     ],
   },
@@ -76,9 +76,8 @@ const homepageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: siteConfig.name,
-  description: 'Professional junk removal in Boise and the Treasure Valley.',
+  description: 'Professional junk removal in Rio Rancho and Central New Mexico.',
   url: siteConfig.baseUrl,
-  telephone: '+18445435865',
   email: siteConfig.email,
   address: {
     '@type': 'PostalAddress',
@@ -89,11 +88,14 @@ const homepageJsonLd = {
     addressCountry: 'US',
   },
   areaServed: [
-    { '@type': 'City', name: 'Boise' },
-    { '@type': 'City', name: 'Meridian' },
-    { '@type': 'City', name: 'Nampa' },
-    { '@type': 'City', name: 'Eagle' },
-    { '@type': 'City', name: 'Garden City' },
+    { '@type': 'City', name: 'Rio Rancho' },
+    { '@type': 'City', name: 'Albuquerque' },
+    { '@type': 'City', name: 'Corrales' },
+    { '@type': 'City', name: 'Los Ranchos de Albuquerque' },
+    { '@type': 'City', name: 'Sandia Heights' },
+    { '@type': 'City', name: 'North Albuquerque Acres' },
+    { '@type': 'City', name: 'Los Lunas' },
+    { '@type': 'City', name: 'Santa Fe' },
   ],
   openingHoursSpecification: [
     {
@@ -124,12 +126,11 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/hero-truck.jpg"
-        backgroundAlt="Professional movers loading furniture onto junk removal truck with mountain backdrop in Treasure Valley Idaho"
-        badge="500+ Treasure Valley Cleanouts Completed"
-        headline="Professional Boise Junk Removal Service"
-        subtext="Respectful, stress-free service that treats your property with care. Serving Boise and the Treasure Valley with eco-friendly junk removal you can trust."
-        primaryCta={{ href: '/quote', label: 'Get Free Instant Quote' }}
-        secondaryCta={{ href: siteConfig.phoneHref, label: `Call ${siteConfig.phone}` }}
+        backgroundAlt="Professional movers loading furniture onto junk removal truck in Central New Mexico"
+        badge="Professional Central New Mexico Junk Removal"
+        headline="Professional Junk Removal Service"
+        subtext="Respectful, stress-free service that treats your property with care. Serving Rio Rancho and Central New Mexico with eco-friendly junk removal you can trust."
+        primaryCta={{ href: '/contact', label: 'Get In Touch' }}
         showTrustIndicators
       />
 
@@ -162,8 +163,8 @@ export default function Home() {
         <ScrollReveal className="mx-auto mt-32 max-w-7xl">
           <div className="rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl">
             <SectionHeading
-              title="Treasure Valley Locals"
-              subtitle="We understand the unique needs of Idaho communities"
+              title="Central New Mexico Locals"
+              subtitle="We understand the unique needs of New Mexico communities"
               variant="dark"
             />
 
@@ -305,7 +306,7 @@ export default function Home() {
         <ScrollReveal className="mx-auto mt-32 max-w-7xl">
           <SectionHeading
             title="Eco-Friendly by Design"
-            subtitle="We're committed to keeping the Treasure Valley beautiful by diverting waste from landfills"
+            subtitle="We're committed to keeping New Mexico beautiful by diverting waste from landfills"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -341,8 +342,8 @@ export default function Home() {
         {/* Service Areas */}
         <ScrollReveal className="mx-auto mt-32 max-w-7xl">
           <SectionHeading
-            title="Proudly Serving the Treasure Valley"
-            subtitle="From the Boise Foothills to rural communities, we're your local junk removal experts"
+            title="Proudly Serving Central New Mexico"
+            subtitle="From Rio Rancho to Santa Fe, we're your local junk removal experts"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -373,9 +374,8 @@ export default function Home() {
           <CTASection
             headline="Ready for Stress-Free, Professional Service?"
             subtext="Get a free instant quote in minutes. Our advanced photo analysis system provides accurate, transparent pricing."
-            primaryCta={{ href: '/quote', label: 'Get Your Free Quote' }}
-            secondaryCta={{ href: siteConfig.phoneHref, label: 'Or Call Now' }}
-            footnote="No commitment required • Same-day service available • Licensed & insured"
+            primaryCta={{ href: '/contact', label: 'Contact Us Today' }}
+            footnote="Same-day service available • Licensed & insured"
           />
         </div>
       </div>
@@ -414,7 +414,7 @@ const whyChooseUs: Array<{ icon: LucideIcon; title: string; description: string 
   {
     icon: HeartHandshake,
     title: 'Community First',
-    description: 'Locally owned and operated. We donate usable items to Treasure Valley charities and families in need.',
+    description: 'Locally owned and operated. We donate usable items to Central New Mexico charities and families in need.',
   },
 ];
 
@@ -422,22 +422,22 @@ const localExpertise: Array<{ icon: LucideIcon; title: string; description: stri
   {
     icon: Building2,
     title: 'HOA Compliance Experts',
-    description: 'We know Eagle and Meridian HOA rules inside out. Proper disposal documentation and scheduling to keep you compliant.',
+    description: 'We know Rio Rancho and Albuquerque HOA rules inside out. Proper disposal documentation and scheduling to keep you compliant.',
   },
   {
     icon: Snowflake,
-    title: 'Seasonal Service',
-    description: "From spring yard cleanup to winter storage unit clearouts, we handle Idaho's unique seasonal needs year-round.",
+    title: 'Year-Round Desert Service',
+    description: "From monsoon season yard cleanup to winter storage unit clearouts, we handle New Mexico's unique seasonal needs year-round.",
   },
   {
     icon: TrendingUp,
     title: 'Growth & Moving Specialists',
-    description: 'Boise is booming! We help new residents settle in and departing neighbors move out smoothly.',
+    description: 'Central New Mexico is growing! We help new residents settle in and departing neighbors move out smoothly.',
   },
   {
     icon: HardHat,
     title: 'New Construction Ready',
-    description: 'Supporting the Nampa and Meridian building boom with fast construction debris removal and site cleanup.',
+    description: 'Supporting the Rio Rancho and Albuquerque building boom with fast construction debris removal and site cleanup.',
   },
 ];
 
@@ -496,6 +496,8 @@ const detailedServices: Array<{ icon: LucideIcon; name: string; items: string }>
   { icon: Monitor, name: 'Electronics', items: 'TVs, computers, e-waste' },
   { icon: Store, name: 'Retail Fixtures', items: 'Shelving, displays, counters' },
   { icon: UtensilsCrossed, name: 'Restaurant Equipment', items: 'Ovens, fridges, prep tables' },
+  { icon: TreePine, name: 'Stump Grinding', items: 'Tree stumps, root removal' },
+  { icon: Package, name: 'Gravel & Mulch Delivery', items: 'Gravel, mulch, topsoil' },
 ];
 
 const pricingSteps = [
@@ -565,7 +567,7 @@ const ecoStats: Array<{
     icon: TreePine,
     value: '500+',
     label: 'Tons Diverted',
-    description: 'Kept out of Idaho landfills in 2024',
+    description: 'Kept out of New Mexico landfills in 2024',
     bg: 'bg-gradient-to-br from-bronze/10 to-white',
     border: 'border-bronze/30',
     iconBg: 'bg-bronze/10',
@@ -577,8 +579,8 @@ const ecoStats: Array<{
 const ecoPartners: Array<{ icon: LucideIcon; name: string }> = [
   { icon: Store, name: 'Habitat ReStore' },
   { icon: Shirt, name: 'Goodwill' },
-  { icon: Recycle, name: 'Treasure Valley Recycling' },
-  { icon: Factory, name: 'Ada County Landfill' },
+  { icon: Recycle, name: 'Albuquerque Recycling' },
+  { icon: Factory, name: 'Sandoval County Landfill' },
   { icon: Smartphone, name: 'E-Waste Recyclers' },
   { icon: Armchair, name: 'Furniture Banks' },
   { icon: Gift, name: 'Local Charities' },
@@ -587,43 +589,43 @@ const ecoPartners: Array<{ icon: LucideIcon; name: string }> = [
 
 const serviceAreas = [
   {
-    city: 'Boise',
-    details: 'North End, Bench, Downtown, Foothills - all neighborhoods served with same-day availability',
-    href: '/locations/boise',
+    city: 'Rio Rancho',
+    details: 'Our home base. All neighborhoods served with same-day availability throughout Rio Rancho',
+    href: '/locations/rio-rancho',
   },
   {
-    city: 'Meridian',
-    details: 'Linder, Eagle Rd corridor, Southeast Meridian. HOA-compliant service with documentation',
-    href: '/locations/meridian',
+    city: 'Albuquerque',
+    details: 'Full coverage across the Duke City — Northeast Heights, Westside, Downtown, and more',
+    href: '/locations/albuquerque',
   },
   {
-    city: 'Eagle',
-    details: 'Gated communities welcome. Experienced with luxury home estate cleanouts and staging',
-    href: '/locations/eagle',
+    city: 'Corrales',
+    details: 'Serving the village of Corrales with rural and residential junk removal',
+    href: '/locations/corrales',
   },
   {
-    city: 'Nampa',
-    details: 'Fast service for growing Nampa. New construction debris specialists',
-    href: '/locations/nampa',
+    city: 'Los Ranchos',
+    details: 'Professional service for Los Ranchos de Albuquerque homes and properties',
+    href: '/locations/los-ranchos',
   },
   {
-    city: 'Caldwell',
-    details: 'Commercial and residential. Agricultural property cleanouts available',
-    href: '/quote',
+    city: 'Sandia Heights',
+    details: 'Experienced with upscale properties and estate cleanouts in the foothills',
+    href: '/locations/sandia-heights',
   },
   {
-    city: 'Kuna',
-    details: 'Rural access no problem. Large property and acreage cleanouts',
-    href: '/quote',
+    city: 'North Albuquerque Acres',
+    details: 'Large property and acreage cleanouts. Rural access no problem',
+    href: '/locations/north-albuquerque-acres',
   },
   {
-    city: 'Star',
-    details: 'Serving Star and Middleton communities. Barn and outbuilding cleanouts',
-    href: '/quote',
+    city: 'Los Lunas',
+    details: 'Commercial and residential service for Los Lunas and surrounding Valencia County',
+    href: '/locations/los-lunas',
   },
   {
-    city: 'Garden City',
-    details: 'Industrial and commercial specialists. Quick turnaround for businesses',
-    href: '/locations/garden-city',
+    city: 'Santa Fe',
+    details: 'Serving the capital city with professional junk removal and construction debris hauling',
+    href: '/locations/santa-fe',
   },
 ];

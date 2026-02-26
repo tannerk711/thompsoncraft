@@ -3,7 +3,7 @@ import { services } from '@/data/services';
 import { locations } from '@/data/locations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://junkhaulerboise.com';
+  const baseUrl = 'https://thompsoncraftllc.com';
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,

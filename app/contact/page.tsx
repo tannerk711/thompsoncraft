@@ -22,14 +22,14 @@ import Button from '@/components/ui/Button';
 // ── SEO Metadata ─────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Junkyard Gentlemen',
+  title: `Contact Us | ${siteConfig.name}`,
   description:
-    'Get in touch with Junkyard Gentlemen for junk removal in the Treasure Valley. Call (844) 543-JUNK or get a free instant photo quote online. We respond in 60 minutes.',
+    'Get in touch with Thompson Craft LLC for junk removal in Central New Mexico. Email us or get a free instant photo quote online. We respond in 60 minutes.',
   alternates: { canonical: `${siteConfig.baseUrl}/contact` },
   openGraph: {
-    title: 'Contact Us | Junkyard Gentlemen',
+    title: `Contact Us | ${siteConfig.name}`,
     description:
-      'Get in touch with Junkyard Gentlemen for junk removal in the Treasure Valley. Call (844) 543-JUNK or get a free instant photo quote.',
+      'Get in touch with Thompson Craft LLC for junk removal in Central New Mexico. Email us or get a free instant photo quote.',
     url: `${siteConfig.baseUrl}/contact`,
     siteName: siteConfig.name,
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.baseUrl}/images/contact/contact-hero.jpg`,
         width: 1200,
         height: 675,
-        alt: 'Contact Junkyard Gentlemen',
+        alt: 'Contact Thompson Craft LLC',
       },
     ],
   },
@@ -70,7 +70,7 @@ export default function ContactPage() {
             openingHours: 'Mo-Sa 07:00-19:00, Su 09:00-17:00',
             areaServed: {
               '@type': 'Place',
-              name: 'Treasure Valley, Idaho',
+              name: 'Central New Mexico',
             },
           }),
         }}
@@ -79,15 +79,11 @@ export default function ContactPage() {
       {/* Hero */}
       <HeroSection
         backgroundImage="/images/contact/contact-hero.jpg"
-        backgroundAlt="Contact the Junkyard Gentlemen team"
+        backgroundAlt="Contact the Thompson Craft LLC team"
         badge="We're Here to Help"
         headline="Get In Touch"
-        subtext="Have a question or ready to schedule your junk removal? Reach out by phone, email, or get a free instant quote online. We respond within 60 minutes."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
+        subtext="Have a question or ready to schedule your junk removal? Reach out by email and we'll respond within 60 minutes."
+        primaryCta={{ label: 'Send Us an Email', href: `mailto:${siteConfig.email}` }}
       />
 
       {/* Get Your Free Quote CTA */}
@@ -218,21 +214,21 @@ export default function ContactPage() {
           <ScrollReveal>
             <SectionHeading
               title="Our Service Area"
-              subtitle="Proudly serving the entire Treasure Valley"
+              subtitle="Proudly serving Central New Mexico"
             />
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186153.16772145!2d-116.35541095!3d43.61656155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54aef172e947b49d%3A0x9a2c4a71a8f0e6b4!2sBoise%2C%20ID!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209867.0!2d-106.7!3d35.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220e5b5e388c59%3A0xf2f9e5b3c5f9c9a9!2sRio%20Rancho%2C%20NM!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Junkyard Gentlemen service area map"
+                title="Thompson Craft LLC service area map"
               />
             </div>
           </ScrollReveal>
@@ -268,12 +264,8 @@ export default function ContactPage() {
       {/* CTA */}
       <CTASection
         headline="Ready for Stress-Free Junk Removal?"
-        subtext="Get a free instant quote in minutes. Our advanced photo analysis system provides accurate, transparent pricing — no commitment required."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
+        subtext="Reach out today for a free estimate. We provide accurate, transparent pricing — no commitment required."
+        primaryCta={{ label: 'Email Us Today', href: `mailto:${siteConfig.email}` }}
         footnote="Same-day service available • Licensed & insured • 80% recycled or donated"
         variant="charcoal"
       />
@@ -291,13 +283,6 @@ const contactMethods: Array<{
   href: string;
 }> = [
   {
-    icon: Phone,
-    title: 'Call Us',
-    value: siteConfig.phone,
-    note: 'Mon–Sat 7am–7pm, Sun 9am–5pm',
-    href: siteConfig.phoneHref,
-  },
-  {
     icon: Mail,
     title: 'Email Us',
     value: siteConfig.email,
@@ -306,31 +291,41 @@ const contactMethods: Array<{
   },
   {
     icon: MapPin,
-    title: 'Visit Us',
+    title: 'Service Area',
     value: `${siteConfig.address.city}, ${siteConfig.address.state}`,
-    note: 'Serving the entire Treasure Valley',
-    href: 'https://www.google.com/maps/place/Boise,+ID',
+    note: 'Serving all of Central New Mexico',
+    href: 'https://www.google.com/maps/place/Rio+Rancho,+NM',
   },
   {
     icon: Clock,
     title: 'Business Hours',
     value: siteConfig.hours,
     note: 'Same-day service available',
-    href: siteConfig.phoneHref,
+    href: `mailto:${siteConfig.email}`,
+  },
+  {
+    icon: MessageSquare,
+    title: 'Quick Response',
+    value: '60 Minutes or Less',
+    note: 'During business hours',
+    href: `mailto:${siteConfig.email}`,
   },
 ];
 
 const responseFeatures = [
   'Quote requests answered with a detailed estimate and scheduling options',
-  'Phone calls returned promptly if we miss you',
-  'Email inquiries get a personal response — no auto-replies',
-  'Same-day scheduling available for most Treasure Valley locations',
+  'Every inquiry gets a personal response — no auto-replies',
+  'Email inquiries answered promptly during business hours',
+  'Same-day scheduling available for most Central New Mexico locations',
 ];
 
 const serviceAreas = [
-  { city: 'Boise', href: '/locations/boise' },
-  { city: 'Meridian', href: '/locations/meridian' },
-  { city: 'Nampa', href: '/locations/nampa' },
-  { city: 'Eagle', href: '/locations/eagle' },
-  { city: 'Garden City', href: '/locations/garden-city' },
+  { city: 'Rio Rancho', href: '/locations/rio-rancho' },
+  { city: 'Albuquerque', href: '/locations/albuquerque' },
+  { city: 'Corrales', href: '/locations/corrales' },
+  { city: 'Los Ranchos', href: '/locations/los-ranchos' },
+  { city: 'Sandia Heights', href: '/locations/sandia-heights' },
+  { city: 'North Albuquerque Acres', href: '/locations/north-albuquerque-acres' },
+  { city: 'Los Lunas', href: '/locations/los-lunas' },
+  { city: 'Santa Fe', href: '/locations/santa-fe' },
 ];

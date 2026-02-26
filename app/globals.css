@@ -4,16 +4,16 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-lexend);
 
-  /* Junkyard Gentlemen Brand Colors - Bronze Theme */
+  /* Thompson Craft LLC Brand Colors - Natural Green Theme */
   /* Charcoal - Dark sophisticated base */
   --color-charcoal: 0 0% 18%;
   --color-charcoal-dark: 0 0% 13%;
   --color-charcoal-light: 0 0% 25%;
 
-  /* Bronze/Gold - Luxury accent */
-  --color-bronze: 43 74% 39%;
-  --color-bronze-light: 43 74% 55%; /* Lighter for better contrast on dark backgrounds */
-  --color-bronze-dark: 43 74% 25%; /* Darker for better contrast on light backgrounds */
+  /* Natural Green - Earthy accent */
+  --color-bronze: 145 55% 35%;
+  --color-bronze-light: 145 55% 48%; /* Lighter for better contrast on dark backgrounds */
+  --color-bronze-dark: 145 55% 24%; /* Darker for better contrast on light backgrounds */
 
   /* Cream - Warm neutral backgrounds */
   --color-cream: 40 20% 96%;
@@ -33,13 +33,13 @@
   --color-foreground: 0 0% 18%;
   --color-primary: 0 0% 18%;
   --color-primary-foreground: 40 20% 96%;
-  --color-secondary: 43 74% 39%;
+  --color-secondary: 145 55% 35%;
   --color-secondary-foreground: 0 0% 100%;
-  --color-accent: 43 74% 39%;
+  --color-accent: 145 55% 35%;
   --color-accent-foreground: 0 0% 100%;
   --color-border: 40 15% 85%;
   --color-input: 40 15% 90%;
-  --color-ring: 43 74% 39%;
+  --color-ring: 145 55% 35%;
 
   /* Card colors */
   --color-card: 0 0% 100%;
@@ -53,19 +53,19 @@
 :root {
   /* Brand Colors (HSL format for compatibility) */
   --brand-charcoal: hsl(0 0% 18%);
-  --brand-bronze: hsl(43 74% 39%);
+  --brand-bronze: hsl(145 55% 35%);
   --brand-cream: hsl(40 20% 96%);
   --brand-forest: hsl(100 45% 25%);
 
   /* Legacy hex colors for gradual migration */
   --brand-charcoal-hex: #2e2e2e;
-  --brand-bronze-hex: #b8860b;
+  --brand-bronze-hex: #28744A;
   --brand-cream-hex: #f5f0e8;
   --brand-forest-hex: #406a40;
 
   /* Semantic Colors */
-  --color-primary-action: hsl(43 74% 39%);
-  --color-primary-action-hover: hsl(43 74% 29%);
+  --color-primary-action: hsl(145 55% 35%);
+  --color-primary-action-hover: hsl(145 55% 25%);
   --color-text-primary: hsl(0 0% 18%);
   --color-text-secondary: hsl(0 0% 45%);
   --color-background-light: hsl(0 0% 100%);

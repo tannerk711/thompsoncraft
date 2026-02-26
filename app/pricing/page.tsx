@@ -27,12 +27,12 @@ import SectionHeading from '@/components/ui/SectionHeading';
 // ── SEO Metadata ─────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Transparent Pricing | Junkyard Gentlemen',
+  title: `Transparent Pricing | ${siteConfig.name}`,
   description:
-    'Volume-based junk removal pricing at $46/cubic yard. No hidden fees, no surprises. Get a free instant photo quote from Junkyard Gentlemen in the Treasure Valley.',
+    'Volume-based junk removal pricing at $46/cubic yard. No hidden fees, no surprises. Get a free instant photo quote from Thompson Craft LLC in Central New Mexico.',
   alternates: { canonical: `${siteConfig.baseUrl}/pricing` },
   openGraph: {
-    title: 'Transparent Pricing | Junkyard Gentlemen',
+    title: `Transparent Pricing | ${siteConfig.name}`,
     description:
       'Volume-based junk removal pricing at $46/cubic yard. No hidden fees, no surprises. Get a free instant photo quote.',
     url: `${siteConfig.baseUrl}/pricing`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.baseUrl}/images/pricing/truck-volume.jpg`,
         width: 1200,
         height: 675,
-        alt: 'Junkyard Gentlemen volume-based pricing',
+        alt: 'Thompson Craft LLC volume-based pricing',
       },
     ],
   },
@@ -60,12 +60,8 @@ export default function PricingPage() {
         backgroundAlt="Junk removal truck with volume measurement markings"
         badge="Simple & Honest"
         headline="Transparent, Volume-Based Pricing"
-        subtext="No hidden fees. No surprise charges. Just honest pricing based on the space your items use in our truck. Upload photos and get an instant quote in minutes."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
+        subtext="No hidden fees. No surprise charges. Just honest pricing based on the space your items use in our truck."
+        primaryCta={{ label: 'Contact Us for a Quote', href: '/contact' }}
       />
 
       {/* How Pricing Works */}
@@ -270,7 +266,7 @@ export default function PricingPage() {
                   <tr className="bg-charcoal text-white">
                     <th className="text-left p-4 font-semibold">Feature</th>
                     <th className="text-center p-4 font-semibold">
-                      <span className="text-bronze-light">Junkyard Gentlemen</span>
+                      <span className="text-bronze-light">Thompson Craft LLC</span>
                     </th>
                     <th className="text-center p-4 font-semibold text-slate-400">
                       Typical Competitors
@@ -318,13 +314,9 @@ export default function PricingPage() {
 
       {/* CTA */}
       <CTASection
-        headline="See Your Price in Minutes"
-        subtext="Upload a few photos and our AI-powered system will calculate an accurate, transparent quote based on volume. No obligation, no pressure."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
+        headline="Ready for a Free Estimate?"
+        subtext="Contact us today for accurate, transparent pricing based on volume. No obligation, no pressure."
+        primaryCta={{ label: 'Contact Us Today', href: '/contact' }}
         footnote="No commitment required • Price confirmed on-site before work begins"
         variant="bronze"
       />
@@ -439,7 +431,7 @@ const pricingFactors: Array<{
     icon: Percent,
     title: 'No Travel Fees',
     description:
-      'Our pricing is all-inclusive within the Treasure Valley. No fuel surcharges, trip fees, or hidden costs regardless of location.',
+      'Our pricing is all-inclusive within Central New Mexico. No fuel surcharges, trip fees, or hidden costs regardless of location.',
   },
   {
     icon: CreditCard,

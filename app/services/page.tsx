@@ -11,14 +11,14 @@ import SectionHeading from '@/components/ui/SectionHeading';
 export const metadata: Metadata = {
   title: `Our Services | ${siteConfig.name}`,
   description:
-    'Professional junk removal services in Boise and the Treasure Valley. Estate cleanouts, residential & commercial junk removal, construction debris, appliance removal, and more.',
+    'Professional junk removal services in Rio Rancho and Central New Mexico. Estate cleanouts, residential & commercial junk removal, construction debris, appliance removal, stump grinding, and more.',
   alternates: {
     canonical: `${siteConfig.baseUrl}/services`,
   },
   openGraph: {
     title: `Our Services | ${siteConfig.name}`,
     description:
-      'Professional junk removal services in Boise and the Treasure Valley.',
+      'Professional junk removal services in Rio Rancho and Central New Mexico.',
     url: `${siteConfig.baseUrl}/services`,
     siteName: siteConfig.name,
     type: 'website',
@@ -35,8 +35,7 @@ export default function ServicesIndexPage() {
         badge="Full-Service Junk Removal"
         headline="Our Services"
         subtext="From single-item pickups to full property cleanouts, we handle it all with professionalism, transparency, and care for the environment."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+        primaryCta={{ label: 'Contact Us', href: '/contact' }}
       />
 
       {/* Services Grid */}
@@ -86,9 +85,8 @@ export default function ServicesIndexPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <CTASection
             headline="Not Sure Which Service You Need?"
-            subtext="No worries — upload photos of what you need removed and we'll figure out the rest. Our AI-powered quote system handles everything."
-            primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-            secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+            subtext="No worries — reach out and we'll figure out the rest. We handle everything from single items to full property cleanouts."
+            primaryCta={{ label: 'Contact Us', href: '/contact' }}
             variant="bronze"
           />
         </div>

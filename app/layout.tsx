@@ -17,12 +17,12 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Junkyard Gentlemen | Premium Junk Removal in Boise & Treasure Valley",
-  description: "Professional, white-glove junk removal service in Boise and Treasure Valley. Stress-free, respectful service with eco-friendly disposal. Free instant quotes. Same-day service available. Licensed & insured.",
-  keywords: "junk removal Boise, Treasure Valley hauling, Meridian junk removal, Eagle furniture removal, eco-friendly disposal Idaho, estate cleanout Boise, construction debris removal, professional junk hauling, white-glove service",
+  title: "Thompson Craft LLC | Professional Junk Removal in Rio Rancho & Central New Mexico",
+  description: "Professional junk removal service in Rio Rancho and Central New Mexico. Stress-free, respectful service with eco-friendly disposal. Same-day service available. Licensed & insured.",
+  keywords: "junk removal Rio Rancho, Albuquerque junk removal, Santa Fe junk removal, stump grinding New Mexico, gravel delivery Rio Rancho, eco-friendly disposal NM, estate cleanout Albuquerque, construction debris removal, professional junk hauling",
   openGraph: {
-    title: "Junkyard Gentlemen | Professional Junk Removal Boise",
-    description: "Professional, stress-free junk removal with white-glove service throughout the Treasure Valley. Eco-friendly, respectful, and reliable.",
+    title: "Thompson Craft LLC | Professional Junk Removal Rio Rancho",
+    description: "Professional, stress-free junk removal throughout Central New Mexico. Eco-friendly, respectful, and reliable.",
     type: "website",
     locale: "en_US",
   },
@@ -40,8 +40,9 @@ export default function RootLayout({
           src="https://upload-widget.cloudinary.com/global/all.js"
           strategy="beforeInteractive"
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17709955283"
+        {/* Google Analytics — update with Thompson Craft LLC tracking ID when available */}
+        {/* <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -49,9 +50,9 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17709955283');
+            gtag('config', 'AW-XXXXXXXXXX');
           `}
-        </Script>
+        </Script> */}
       </head>
       <body
         className={`${inter.variable} ${lexend.variable} antialiased font-sans`}

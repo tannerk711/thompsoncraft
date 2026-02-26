@@ -15,12 +15,12 @@ const sizeMap = {
 
 export default function Logo({ variant = 'light', size = 'md', href = '/' }: LogoProps) {
   const dimensions = sizeMap[size];
-  const logoSrc = '/junkyard-gentlemen-logo.svg';
+  const logoSrc = '/thompson-craft-logo.png';
 
   const logoImage = (
     <Image
       src={logoSrc}
-      alt="Junkyard Gentlemen - Professional Junk Removal"
+      alt="Thompson Craft LLC - Professional Junk Removal"
       width={dimensions.width}
       height={dimensions.height}
       priority

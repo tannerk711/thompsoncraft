@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Junkyard Gentlemen',
+  title: 'Privacy Policy | Thompson Craft LLC',
   description:
-    'Learn how Junkyard Gentlemen collects, uses, and protects your personal information. Our commitment to your privacy.',
+    'Learn how Thompson Craft LLC collects, uses, and protects your personal information. Our commitment to your privacy.',
   alternates: {
-    canonical: 'https://junkhaulerboise.com/privacy',
+    canonical: 'https://thompsoncraftllc.com/privacy',
   },
 };
 
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Introduction</h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Junk Yard Gentlemen ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services, including our instant quote system.
+              Thompson Craft LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services, including our instant quote system.
             </p>
             <p className="text-slate-700 leading-relaxed">
               By using our website and services, you agree to the collection and use of information in accordance with this policy.
@@ -182,10 +182,9 @@ export default function PrivacyPolicy() {
               If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
             </p>
             <div className="bg-slate-50 rounded-lg p-6 mb-4">
-              <p className="font-semibold text-slate-900 mb-2">Junk Yard Gentlemen</p>
-              <p className="text-slate-700">Phone: <a href="tel:+18445435865" className="text-blue-600 hover:text-blue-500">(844) 543-JUNK</a></p>
-              <p className="text-slate-700">Email: privacy@junkyardgentlemen.com</p>
-              <p className="text-slate-700 mt-2">Address: Boise, Idaho</p>
+              <p className="font-semibold text-slate-900 mb-2">Thompson Craft LLC</p>
+              <p className="text-slate-700">Email: <a href="mailto:Thompsoncraftllc@gmail.com" className="text-blue-600 hover:text-blue-500">Thompsoncraftllc@gmail.com</a></p>
+              <p className="text-slate-700 mt-2">Address: Rio Rancho, New Mexico 87124</p>
             </div>
             <p className="text-slate-700 leading-relaxed">
               We will respond to your inquiry within 30 days.

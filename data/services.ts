@@ -32,6 +32,8 @@ import {
   Warehouse,
   UtensilsCrossed,
   ShoppingCart,
+  Truck,
+  Mountain,
 } from 'lucide-react';
 import type { ServicePage } from '@/types';
 import { serviceFaqs } from './faqs';
@@ -45,8 +47,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Compassionate Estate Cleanout Services',
     heroSubtext: 'We handle full property cleanouts with care, respect, and efficiency — so you can focus on what matters most during difficult transitions.',
     meta: {
-      title: 'Estate Cleanout Services | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional estate cleanout services in Boise and the Treasure Valley. Compassionate, thorough property clearing with donation sorting and eco-friendly disposal.',
+      title: 'Estate Cleanout Services | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional estate cleanout services in Rio Rancho and Central New Mexico. Compassionate, thorough property clearing with donation sorting and eco-friendly disposal.',
     },
     whatWeRemove: [
       { icon: Sofa, name: 'Furniture', description: 'All types of household furniture from every room' },
@@ -82,8 +84,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Fast, Complete Storage Unit Cleanouts',
     heroSubtext: 'Stop paying monthly fees for stuff you don\'t need. We clear your storage unit quickly and handle everything — donation, recycling, and disposal.',
     meta: {
-      title: 'Storage Unit Cleanout Services | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional storage unit cleanout services in the Treasure Valley. Fast, affordable clearing of storage units with sorting, donation, and eco-friendly disposal.',
+      title: 'Storage Unit Cleanout Services | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional storage unit cleanout services in Central New Mexico. Fast, affordable clearing of storage units with sorting, donation, and eco-friendly disposal.',
     },
     whatWeRemove: [
       { icon: Boxes, name: 'Boxes & Containers', description: 'Packed boxes, plastic bins, and storage containers' },
@@ -117,8 +119,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Hassle-Free Home Junk Removal',
     heroSubtext: 'From a single couch to a full garage cleanout, our professional team handles all the heavy lifting so you don\'t have to.',
     meta: {
-      title: 'Residential Junk Removal | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional residential junk removal in Boise and the Treasure Valley. Furniture, appliances, electronics, garage cleanouts, and more. Same-day service available.',
+      title: 'Residential Junk Removal | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional residential junk removal in Rio Rancho and Central New Mexico. Furniture, appliances, electronics, garage cleanouts, and more. Same-day service available.',
     },
     whatWeRemove: [
       { icon: Sofa, name: 'Furniture', description: 'Couches, tables, chairs, dressers, and all household furniture' },
@@ -154,8 +156,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Professional Commercial Junk Removal',
     heroSubtext: 'Office cleanouts, retail decommissions, and commercial property clearing. Flexible scheduling to keep your business running.',
     meta: {
-      title: 'Commercial Junk Removal | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional commercial junk removal in the Treasure Valley. Office cleanouts, retail fixtures, restaurant equipment, and warehouse clearing with flexible scheduling.',
+      title: 'Commercial Junk Removal | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional commercial junk removal in Central New Mexico. Office cleanouts, retail fixtures, restaurant equipment, and warehouse clearing with flexible scheduling.',
     },
     whatWeRemove: [
       { icon: Armchair, name: 'Office Furniture', description: 'Desks, chairs, cubicles, conference tables, and filing cabinets' },
@@ -189,8 +191,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Fast Construction Debris Removal',
     heroSubtext: 'A better alternative to dumpster rentals. We load, haul, and recycle construction waste from renovation and building projects.',
     meta: {
-      title: 'Construction Debris Removal | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional construction debris removal in the Treasure Valley. Drywall, lumber, concrete, roofing, and renovation waste. Faster and more affordable than dumpster rental.',
+      title: 'Construction Debris Removal | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional construction debris removal in Central New Mexico. Drywall, lumber, concrete, roofing, and renovation waste. Faster and more affordable than dumpster rental.',
     },
     whatWeRemove: [
       { icon: Paintbrush, name: 'Drywall & Plaster', description: 'Torn-out drywall, plaster, and wall materials' },
@@ -224,8 +226,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Easy Appliance Removal & Recycling',
     heroSubtext: 'We disconnect, carry out, and responsibly recycle your old appliances. No damage to your home, no hassle for you.',
     meta: {
-      title: 'Appliance Removal & Recycling | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional appliance removal in the Treasure Valley. Refrigerators, washers, dryers, dishwashers, and more. We disconnect, haul, and recycle responsibly.',
+      title: 'Appliance Removal & Recycling | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional appliance removal in Central New Mexico. Refrigerators, washers, dryers, dishwashers, and more. We disconnect, haul, and recycle responsibly.',
     },
     whatWeRemove: [
       { icon: Refrigerator, name: 'Refrigerators & Freezers', description: 'All sizes including side-by-side, French door, and commercial' },
@@ -259,8 +261,8 @@ export const services: ServicePage[] = [
     heroHeadline: 'Complete Yard Waste & Debris Removal',
     heroSubtext: 'Branches, stumps, lawn debris, old fencing — we haul it all away and leave your yard looking pristine.',
     meta: {
-      title: 'Yard Waste Removal | Boise, ID | Junkyard Gentlemen',
-      description: 'Professional yard waste removal in the Treasure Valley. Tree branches, stumps, lawn debris, old fencing, and landscaping waste. Seasonal cleanup service available.',
+      title: 'Yard Waste Removal | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional yard waste removal in Central New Mexico. Tree branches, stumps, lawn debris, old fencing, and landscaping waste. Seasonal cleanup service available.',
     },
     whatWeRemove: [
       { icon: TreePine, name: 'Tree Debris', description: 'Branches, limbs, trunks, and cut stumps' },
@@ -285,6 +287,74 @@ export const services: ServicePage[] = [
     faqs: serviceFaqs['yard-waste-removal'],
     beforeAfterImages: [],
     testimonialIds: ['mark-johnson'],
+  },
+  {
+    slug: 'stump-grinding',
+    name: 'Stump Grinding',
+    icon: Mountain,
+    heroImage: '/images/services/stump-grinding-hero.jpg',
+    heroHeadline: 'Professional Stump Grinding Services',
+    heroSubtext: 'Ugly stumps gone for good. We grind stumps below grade and clean up the debris so your yard looks smooth and ready for landscaping.',
+    meta: {
+      title: 'Stump Grinding Services | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Professional stump grinding in Rio Rancho and Central New Mexico. Fast, affordable stump removal that restores your yard. Same-day service available.',
+    },
+    whatWeRemove: [
+      { icon: TreePine, name: 'Tree Stumps', description: 'Stumps of all sizes ground below grade level' },
+      { icon: Leaf, name: 'Surface Roots', description: 'Visible roots ground down flush with the surrounding ground' },
+      { icon: Shovel, name: 'Grinding Debris', description: 'Wood chips and mulch from the grinding process hauled away or left for fill' },
+      { icon: Fence, name: 'Small Trees', description: 'Small unwanted trees cut and stumps ground in one visit' },
+    ],
+    howItWorks: [
+      { title: 'Assessment', description: 'Tell us about your stumps — size, quantity, and location. We provide a quick estimate based on diameter.' },
+      { title: 'Schedule Service', description: 'Same-day and next-day availability. We work around your schedule and landscaping plans.' },
+      { title: 'Grind Below Grade', description: 'We grind each stump 6-12 inches below grade using professional equipment. Clean, thorough work.' },
+      { title: 'Clean Finish', description: 'Debris is cleaned up and the area is filled. Your yard is ready for new grass, mulch, or landscaping.' },
+    ],
+    pricingFactors: [
+      { title: 'Stump Diameter', description: 'Pricing is primarily based on the diameter of each stump at ground level.' },
+      { title: 'Number of Stumps', description: 'Multi-stump discounts available when grinding several stumps in one visit.' },
+      { title: 'Root Complexity', description: 'Surface roots and root systems extending far from the stump may affect scope.' },
+      { title: 'Access', description: 'Easy yard access vs. tight spaces near fences or structures can affect equipment options.' },
+    ],
+    faqs: serviceFaqs['stump-grinding'] || [],
+    beforeAfterImages: [],
+    testimonialIds: [],
+  },
+  {
+    slug: 'gravel-mulch-delivery',
+    name: 'Gravel & Mulch Delivery',
+    icon: Truck,
+    heroImage: '/images/services/gravel-mulch-delivery-hero.jpg',
+    heroHeadline: 'Gravel & Mulch Delivery Service',
+    heroSubtext: 'Quality gravel, mulch, and landscaping materials delivered right to your property. We handle the heavy lifting so you can focus on your project.',
+    meta: {
+      title: 'Gravel & Mulch Delivery | Rio Rancho, NM | Thompson Craft LLC',
+      description: 'Affordable gravel and mulch delivery in Rio Rancho and Central New Mexico. Decorative rock, pea gravel, bark mulch, and more delivered to your door.',
+    },
+    whatWeRemove: [
+      { icon: Shovel, name: 'Pea Gravel', description: 'Smooth, rounded gravel perfect for walkways and drainage' },
+      { icon: Mountain, name: 'Decorative Rock', description: 'River rock, lava rock, and decorative stone for landscaping' },
+      { icon: Leaf, name: 'Bark Mulch', description: 'Shredded bark and wood mulch for garden beds and landscaping' },
+      { icon: TreePine, name: 'Wood Chips', description: 'Fresh wood chips for pathways, play areas, and ground cover' },
+      { icon: Fence, name: 'Crushed Gravel', description: 'Crushed stone and road base for driveways and foundations' },
+      { icon: FileBox, name: 'Fill Dirt & Topsoil', description: 'Quality fill dirt and topsoil for grading and planting' },
+    ],
+    howItWorks: [
+      { title: 'Choose Material', description: 'Tell us what you need — gravel type, mulch variety, and approximate quantity for your project.' },
+      { title: 'Get a Quote', description: 'We provide pricing based on material type and volume. Delivery is included within our service area.' },
+      { title: 'Scheduled Delivery', description: 'We deliver on your schedule. Materials are placed in your driveway or designated area.' },
+      { title: 'Spreading Available', description: 'Need help spreading? We offer material spreading services for an additional fee.' },
+    ],
+    pricingFactors: [
+      { title: 'Material Type', description: 'Different materials have different costs. Decorative rock is typically more than standard gravel.' },
+      { title: 'Volume', description: 'Priced per cubic yard. Larger orders get better per-yard pricing.' },
+      { title: 'Delivery Distance', description: 'Delivery within our standard service area is included. Extended distances may have a fee.' },
+      { title: 'Spreading Service', description: 'Optional spreading service is priced based on area size and material type.' },
+    ],
+    faqs: serviceFaqs['gravel-mulch-delivery'] || [],
+    beforeAfterImages: [],
+    testimonialIds: [],
   },
 ];
 

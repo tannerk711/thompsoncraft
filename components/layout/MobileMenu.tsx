@@ -136,8 +136,8 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
               ))}
             </nav>
 
-            {/* Bottom CTA */}
-            <div className="p-5 border-t border-white/10 space-y-3">
+            {/* Bottom CTA — hidden until phone number is configured */}
+            {/* <div className="p-5 border-t border-white/10 space-y-3">
               <a
                 href={siteConfig.phoneHref}
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border-2 border-cream text-cream font-semibold hover:bg-cream hover:text-charcoal transition-all"
@@ -152,7 +152,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
               >
                 Get Free Instant Quote
               </Link>
-            </div>
+            </div> */}
           </motion.div>
         </>
       )}

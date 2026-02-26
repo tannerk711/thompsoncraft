@@ -5,15 +5,15 @@ import type { FAQ } from '@/types';
 export const generalFaqs: FAQ[] = [
   {
     question: 'How does junk removal pricing work?',
-    answer: 'We use transparent, volume-based pricing at $46 per cubic yard (compressed). You only pay for the space your items actually take up in our truck. Upload photos for a free instant quote, and we confirm the final price on-site before any work begins.',
+    answer: 'We use transparent, volume-based pricing at $46 per cubic yard (compressed). You only pay for the space your items actually take up in our truck. Contact us for a free estimate, and we confirm the final price on-site before any work begins.',
   },
   {
     question: 'Do you offer same-day junk removal?',
-    answer: 'Yes! We offer same-day service throughout the Treasure Valley. Call us at (844) 543-JUNK or submit a quote request, and we can often be there within a few hours depending on availability.',
+    answer: 'Yes! We offer same-day service throughout Central New Mexico. Email us or submit a quote request, and we can often be there within a few hours depending on availability.',
   },
   {
     question: 'What items do you accept?',
-    answer: 'We remove almost anything non-hazardous: furniture, appliances, electronics, yard waste, construction debris, office equipment, hot tubs, and more. We cannot accept hazardous materials like paint, chemicals, asbestos, or medical waste.',
+    answer: 'We remove almost anything non-hazardous: furniture, appliances, electronics, yard waste, construction debris, office equipment, hot tubs, and more. We also offer stump grinding and gravel/mulch delivery. We cannot accept hazardous materials like paint, chemicals, asbestos, or medical waste.',
   },
   {
     question: 'Are you licensed and insured?',
@@ -21,7 +21,7 @@ export const generalFaqs: FAQ[] = [
   },
   {
     question: 'What happens to my junk after you take it?',
-    answer: 'We recycle or donate approximately 80% of everything we collect. Usable items go to local charities like Habitat ReStore and Goodwill. Recyclable materials go to Treasure Valley recycling facilities. Only what truly cannot be reused goes to the landfill.',
+    answer: 'We recycle or donate approximately 80% of everything we collect. Usable items go to local charities like Habitat ReStore and Goodwill. Recyclable materials go to local recycling facilities. Only what truly cannot be reused goes to the landfill.',
   },
   {
     question: 'Do I need to be home during the removal?',
@@ -42,7 +42,7 @@ export const generalFaqs: FAQ[] = [
 export const pricingFaqs: FAQ[] = [
   {
     question: 'How is volume measured?',
-    answer: 'We measure by cubic yard of compressed truck space. When items are loaded, they get compressed to maximize efficiency. Your photo-based quote estimates this volume, and we confirm on-site by measuring what we actually load.',
+    answer: 'We measure by cubic yard of compressed truck space. When items are loaded, they get compressed to maximize efficiency. Your quote estimates this volume, and we confirm on-site by measuring what we actually load.',
   },
   {
     question: 'What does $46 per cubic yard mean in real terms?',
@@ -62,11 +62,11 @@ export const pricingFaqs: FAQ[] = [
   },
   {
     question: 'Do you charge for travel or fuel?',
-    answer: 'No. Our pricing is all-inclusive within the Treasure Valley service area. No fuel surcharges, trip fees, or hidden costs.',
+    answer: 'No. Our pricing is all-inclusive within our Central New Mexico service area. No fuel surcharges, trip fees, or hidden costs.',
   },
   {
     question: 'How does the photo quote compare to the final price?',
-    answer: 'Our AI-powered photo analysis is remarkably accurate — most final prices are within 10% of the estimate, and many come in lower. The on-site confirmation ensures you always know the exact price before we begin.',
+    answer: 'Our photo-based estimates are remarkably accurate — most final prices are within 10% of the estimate, and many come in lower. The on-site confirmation ensures you always know the exact price before we begin.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -127,50 +127,87 @@ export const serviceFaqs: Record<string, FAQ[]> = {
   ],
   'yard-waste-removal': [
     { question: 'What types of yard waste do you accept?', answer: 'Tree branches, bush trimmings, grass clippings, leaves, stumps, sod, dirt, gravel, old fencing, deck materials, garden waste, and general landscape debris.' },
-    { question: 'Do you remove tree stumps?', answer: 'We remove already-cut stumps and roots. For stump grinding of in-ground stumps, we can recommend trusted local arborists and then haul away the grinding debris.' },
+    { question: 'Do you remove tree stumps?', answer: 'Yes! We offer stump grinding as a dedicated service. We can grind stumps below grade and haul away the debris.' },
     { question: 'Can you handle large tree limbs?', answer: 'Yes! We handle branches and limbs of all sizes. For very large trees, we recommend having them cut by an arborist first, then we handle all the debris removal.' },
     { question: 'Do you remove old fencing and decking?', answer: 'Absolutely. We demolish and remove old wood fences, chain link fences, decks, pergolas, and other outdoor structures.' },
     { question: 'What happens to the yard waste?', answer: 'Green waste is composted or mulched at local facilities. Wood is recycled when possible. We divert as much yard waste as possible from landfills.' },
     { question: 'Do you offer spring/fall cleanup service?', answer: 'Yes! Seasonal cleanups are one of our most popular services. We clear out accumulated debris, dead plants, and prepare your yard for the next season.' },
+  ],
+  'stump-grinding': [
+    { question: 'How deep do you grind stumps?', answer: 'We typically grind stumps 6-12 inches below grade, which is deep enough for new grass, mulch, or landscaping to be placed over the area.' },
+    { question: 'Can you grind stumps near fences or buildings?', answer: 'Yes, we have equipment suited for tight spaces. We can grind stumps near fences, foundations, sidewalks, and other structures with care.' },
+    { question: 'What happens to the wood chips?', answer: 'We can leave the wood chips as free fill material for the hole, or haul them away at no extra charge. Many homeowners use them as mulch.' },
+    { question: 'Do you remove the roots too?', answer: 'We grind the stump and major surface roots. Underground roots will naturally decompose over time and are not typically a concern.' },
+    { question: 'How is stump grinding priced?', answer: 'Pricing is primarily based on the diameter of each stump. We offer discounts for multiple stumps done in the same visit.' },
+    { question: 'Will stump grinding damage my yard?', answer: 'We take care to minimize yard impact. There may be minor tire tracks or disturbed soil around the stump, which settles quickly. We clean up all debris.' },
+  ],
+  'gravel-mulch-delivery': [
+    { question: 'What types of gravel and mulch do you deliver?', answer: 'We deliver pea gravel, decorative rock, river rock, lava rock, crushed gravel, bark mulch, wood chips, fill dirt, and topsoil. Contact us for specific material availability.' },
+    { question: 'How much material do I need?', answer: 'A general rule: 1 cubic yard covers about 100 square feet at 3 inches deep. We can help you calculate the right amount based on your project area.' },
+    { question: 'Where do you place the material?', answer: 'We typically deliver to your driveway or a flat, accessible area on your property. For specific placement requests, let us know and we will accommodate when possible.' },
+    { question: 'Do you offer spreading services?', answer: 'Yes! For an additional fee, our crew can spread the material in your designated area. This is especially popular for mulch beds and gravel walkways.' },
+    { question: 'What is the minimum delivery amount?', answer: 'Our minimum delivery is typically 1 cubic yard. For smaller amounts, we can still accommodate — contact us to discuss your needs.' },
+    { question: 'How far in advance should I order?', answer: 'We can often deliver next-day. For large orders or specific materials, we recommend 2-3 days advance notice to ensure availability.' },
   ],
 };
 
 // ── Location-Specific FAQs ──────────────────────────────────────────
 
 export const locationFaqs: Record<string, FAQ[]> = {
-  boise: [
-    { question: 'What areas of Boise do you serve?', answer: 'We serve all of Boise including the North End, Bench, Downtown, East End, West Boise, Boise Foothills, Southeast Boise, and all surrounding neighborhoods.' },
-    { question: 'Do you offer same-day service in Boise?', answer: 'Yes! Boise is our home base. Same-day service is available most days, and we can often arrive within a few hours of your request.' },
-    { question: 'Can you handle jobs in the Boise Foothills?', answer: 'Absolutely. We regularly service homes in the Foothills with steep driveways, hillside access, and other unique challenges. Our team has the experience and equipment to handle it.' },
-    { question: 'Do you work in downtown Boise?', answer: 'Yes, including apartments and condos. We navigate parking, elevators, and tight spaces regularly in downtown Boise.' },
-    { question: 'Are there any areas too remote for service?', answer: 'We serve the entire Boise metropolitan area. For locations significantly outside Ada County, give us a call to confirm coverage and any travel considerations.' },
+  'rio-rancho': [
+    { question: 'What areas of Rio Rancho do you serve?', answer: 'We serve all of Rio Rancho including Enchanted Hills, Loma Colorado, Cabezon, Northern Meadows, Rio Rancho Estates, Sundance, and all surrounding neighborhoods.' },
+    { question: 'Do you offer same-day service in Rio Rancho?', answer: 'Yes! Rio Rancho is our home base. Same-day service is available most days, and we can often arrive within a few hours of your request.' },
+    { question: 'Do you handle HOA-compliant cleanups?', answer: 'Absolutely. We understand many Rio Rancho communities have HOA requirements. We provide prompt, thorough service that meets HOA standards.' },
+    { question: 'Do you serve the newer developments?', answer: 'Yes, we serve all Rio Rancho communities including new developments in Enchanted Hills, Loma Colorado, and all areas along Unser and Northern.' },
+    { question: 'Is there an extra charge for Rio Rancho service?', answer: 'No! As our home base, Rio Rancho gets our standard pricing with no travel or distance charges.' },
   ],
-  meridian: [
-    { question: 'Do you serve all of Meridian?', answer: 'Yes! We cover all Meridian neighborhoods including the Linder Road corridor, Ten Mile area, Ustick Road area, Southeast Meridian, and all new developments.' },
-    { question: 'Are you familiar with Meridian HOA requirements?', answer: "Very much so. We understand that many Meridian neighborhoods have strict HOA rules about exterior appearance and cleanup timelines. We provide prompt service with proper documentation." },
-    { question: 'Can you handle new construction debris in Meridian?', answer: "Absolutely. With Meridian's rapid growth, we regularly clear construction debris from new builds, renovations, and landscaping projects." },
-    { question: 'Do you offer commercial service in Meridian?', answer: 'Yes, we serve businesses along Eagle Road, the Village at Meridian area, and commercial districts throughout the city.' },
-    { question: 'What is typical response time for Meridian?', answer: "Same-day service is available for most Meridian jobs. We're typically able to schedule within a few hours or offer next-morning service." },
+  albuquerque: [
+    { question: 'Do you serve all of Albuquerque?', answer: 'Yes! We cover the entire Albuquerque metro including Northeast Heights, Nob Hill, Old Town, Downtown, Uptown, West Side, South Valley, North Valley, Foothills, and all neighborhoods.' },
+    { question: 'Can you handle commercial jobs in Albuquerque?', answer: 'Absolutely. We serve businesses throughout Albuquerque — offices, restaurants, retail spaces, warehouses, and more. Flexible scheduling available.' },
+    { question: 'Do you work in downtown Albuquerque?', answer: 'Yes, including apartments and condos. We navigate parking, elevators, and tight spaces regularly in downtown and Nob Hill.' },
+    { question: 'What is typical response time for Albuquerque?', answer: 'Same-day service is available for most Albuquerque jobs. We can typically schedule within a few hours or offer next-morning service.' },
+    { question: 'Do you serve the South Valley and West Side?', answer: 'Yes! Our service area covers the entire Albuquerque metro including South Valley, West Side, Taylor Ranch, Paradise Hills, and all surrounding communities.' },
   ],
-  nampa: [
-    { question: 'Do you provide regular service to Nampa?', answer: "Yes! Nampa is one of our key service areas. We have crews in Nampa daily and offer the same fast response times as our Boise service." },
-    { question: 'Can you handle large construction projects in Nampa?', answer: 'Absolutely. We support the Nampa building boom with construction debris removal for residential and commercial projects of all sizes.' },
-    { question: 'Do you serve rural areas around Nampa?', answer: 'Yes, we service rural properties around Nampa including farm cleanouts, barn clearing, and large property cleanups.' },
-    { question: 'What about agricultural waste removal?', answer: 'We handle many types of agricultural clean-up including old equipment, building materials, fencing, and general farm debris. Hazardous agricultural chemicals are excluded.' },
-    { question: 'Is pricing the same in Nampa as Boise?', answer: 'Yes! Our volume-based pricing is consistent across the entire Treasure Valley. No extra travel or distance charges for Nampa.' },
+  corrales: [
+    { question: 'Do you serve rural properties in Corrales?', answer: 'Yes! We understand the unique needs of Corrales properties including large lots, horse properties, and rural acreage. We have the equipment for larger jobs.' },
+    { question: 'Can you handle barn and outbuilding cleanouts?', answer: 'Absolutely. We regularly clear barns, sheds, and outbuildings on Corrales properties. We sort, donate, and recycle wherever possible.' },
+    { question: 'Do you work on historic adobe properties?', answer: 'Yes, we treat historic properties with extra care. Our crew is experienced with the unique characteristics of adobe homes and takes precautions to protect the structure.' },
+    { question: 'Is Corrales in your standard service area?', answer: 'Yes! Corrales is part of our core Central New Mexico service area. Same pricing and same-day availability as all our other locations.' },
+    { question: 'Do you offer stump grinding in Corrales?', answer: 'Yes! Stump grinding is one of our services, and we regularly serve Corrales properties with large trees and cottonwoods.' },
   ],
-  eagle: [
-    { question: 'Do you work in gated communities in Eagle?', answer: 'Yes! We regularly service gated communities and luxury homes in Eagle. We coordinate with HOAs and gate access as needed.' },
-    { question: 'Can you handle luxury estate cleanouts?', answer: 'Absolutely. Our team is experienced with high-end properties and treats every home with the utmost care and respect. We use protective coverings and careful handling techniques.' },
-    { question: 'Do you serve Eagle Island and surrounding areas?', answer: 'Yes, we service Eagle Island, Hidden Springs, and all Eagle neighborhoods. Our team knows the area well.' },
-    { question: 'What about Eagle foothills properties?', answer: 'We regularly service foothills properties with challenging access. Our equipment and experienced crew can handle steep driveways and remote locations.' },
-    { question: 'Are your crews background-checked?', answer: 'Yes. All team members are background-checked, uniformed, and trained professionals. We understand the trust required when working in luxury homes and gated communities.' },
+  'los-ranchos': [
+    { question: 'Do you serve the Village of Los Ranchos?', answer: 'Yes! We cover all of Los Ranchos de Albuquerque including properties along Rio Grande Blvd, Fourth Street, and all village neighborhoods.' },
+    { question: 'Can you work in the bosque area properties?', answer: 'Absolutely. We serve properties near the Rio Grande bosque and understand the access and environmental considerations of these areas.' },
+    { question: 'Do you offer yard waste removal in Los Ranchos?', answer: 'Yes! With the large trees and gardens in Los Ranchos, yard waste removal is one of our most requested services in the area.' },
+    { question: 'Is Los Ranchos included in your service area?', answer: 'Yes! Los Ranchos is right in the heart of our service area. Standard pricing with no extra charges.' },
+    { question: 'Can you handle estate cleanouts in Los Ranchos?', answer: 'Yes, we regularly handle estate cleanouts in Los Ranchos, working with families, realtors, and attorneys to clear properties thoroughly and respectfully.' },
   ],
-  'garden-city': [
-    { question: 'Do you serve commercial businesses in Garden City?', answer: 'Yes! Garden City is a hub for local businesses, and we provide both commercial and industrial junk removal throughout the area.' },
-    { question: 'Can you handle warehouse cleanouts in Garden City?', answer: 'Absolutely. We regularly clear warehouses, workshops, and industrial spaces in Garden City. We have the equipment and crew for large-scale jobs.' },
-    { question: 'Do you work with Garden City businesses on Chinden?', answer: 'Yes, we serve businesses along Chinden Boulevard and throughout Garden City. We work around business hours to minimize disruption.' },
-    { question: 'What about the mixed-use areas in Garden City?', answer: 'We service all property types in Garden City — residential, commercial, industrial, and mixed-use. From brewery cleanouts to apartment turnovers, we handle it all.' },
-    { question: 'Is Garden City included in your standard service area?', answer: 'Yes! Garden City is right in the heart of our Treasure Valley service area. Same pricing and same-day availability as all our other locations.' },
+  'sandia-heights': [
+    { question: 'Do you serve the Sandia Heights area?', answer: 'Yes! We serve all of Sandia Heights including the neighborhoods around the Tramway, High Desert, Bear Canyon, and Elena Gallegos areas.' },
+    { question: 'Can you handle properties with steep driveways?', answer: 'Absolutely. Our crew and equipment are experienced with the hillside properties and steep driveways common in Sandia Heights.' },
+    { question: 'Do you work in gated communities?', answer: 'Yes, we regularly service gated communities and custom homes in the area. We coordinate with HOAs and gate access as needed.' },
+    { question: 'Are your crews background-checked?', answer: 'Yes. All team members are background-checked and trained professionals. We understand the trust required when working in Sandia Heights homes.' },
+    { question: 'Is pricing the same for Sandia Heights?', answer: 'Yes! Our volume-based pricing is consistent across our entire Central New Mexico service area. No extra fees for Sandia Heights.' },
+  ],
+  'north-albuquerque-acres': [
+    { question: 'Do you serve North Albuquerque Acres?', answer: 'Yes! We cover all of North Albuquerque Acres and the surrounding east-side communities. Our equipment handles the larger lots common in this area.' },
+    { question: 'Can you handle large property cleanouts?', answer: 'Absolutely. With the larger lots in North Albuquerque Acres, we regularly handle extensive cleanouts including barns, outbuildings, and multi-acre yard clearing.' },
+    { question: 'Do you deliver gravel and mulch to North Albuquerque Acres?', answer: 'Yes! Gravel and mulch delivery is available throughout our service area, including North Albuquerque Acres.' },
+    { question: 'What about stump grinding for large trees?', answer: 'We handle stumps of all sizes. The large cottonwoods and elms common in North Albuquerque Acres are no problem for our professional equipment.' },
+    { question: 'Is same-day service available?', answer: 'Yes! Same-day service is available for most jobs in North Albuquerque Acres. Contact us and we can often be there within a few hours.' },
+  ],
+  'los-lunas': [
+    { question: 'Do you serve the Los Lunas area?', answer: 'Yes! Los Lunas and the surrounding Valencia County communities are part of our service area. We provide the same reliable service as all our locations.' },
+    { question: 'Can you handle new construction debris in Los Lunas?', answer: 'Absolutely. With the growth in the Los Lunas area, we regularly remove construction debris from new builds and renovations.' },
+    { question: 'Is pricing the same as Albuquerque?', answer: 'Yes! Our volume-based pricing is consistent across our entire Central New Mexico service area. No extra travel or distance charges for Los Lunas.' },
+    { question: 'Do you serve rural properties around Los Lunas?', answer: 'Yes, we service rural properties around Los Lunas including farm cleanouts, barn clearing, and large property cleanups.' },
+    { question: 'What is your response time for Los Lunas?', answer: 'Same-day service is available for most Los Lunas jobs. We can typically schedule within a few hours or offer next-morning service.' },
+  ],
+  'santa-fe': [
+    { question: 'Do you serve all of Santa Fe?', answer: 'Yes! We cover all of Santa Fe including the Historic District, Canyon Road, Railyard, Casa Solana, Eldorado, Tesuque, Las Campanas, and all surrounding areas.' },
+    { question: 'Can you handle historic property cleanouts?', answer: 'Absolutely. We have experience with Santa Fe\'s unique adobe architecture and historic properties. Our crew treats these homes with the extra care they deserve.' },
+    { question: 'Do you work with Santa Fe galleries and businesses?', answer: 'Yes, we provide commercial junk removal for galleries, shops, restaurants, and businesses throughout Santa Fe. Flexible scheduling around your business hours.' },
+    { question: 'Is there an extra charge for Santa Fe service?', answer: 'Santa Fe is part of our standard service area. Our pricing is consistent across all locations with no extra travel charges.' },
+    { question: 'Can you handle renovation debris in Santa Fe?', answer: 'Yes! Santa Fe has many ongoing renovation projects and we regularly remove construction debris from residential and commercial renovations.' },
   ],
 };

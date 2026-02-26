@@ -57,8 +57,7 @@ export default async function ServicePage({ params }: Props) {
         badge="Professional Service"
         headline={service.heroHeadline}
         subtext={service.heroSubtext}
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+        primaryCta={{ label: 'Contact Us', href: '/contact' }}
         showTrustIndicators
       />
 
@@ -175,8 +174,7 @@ export default async function ServicePage({ params }: Props) {
           <CTASection
             headline="Get Your Free Instant Quote"
             subtext={`Ready for ${service.name.toLowerCase()}? Upload a few photos and get a price estimate in minutes.`}
-            primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-            secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+            primaryCta={{ label: 'Contact Us', href: '/contact' }}
             variant="charcoal"
           />
         </div>

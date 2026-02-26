@@ -28,6 +28,8 @@ const serviceLinks = [
   { label: 'Construction Debris', href: '/services/construction-debris-removal' },
   { label: 'Appliance Removal', href: '/services/appliance-removal' },
   { label: 'Yard Waste Removal', href: '/services/yard-waste-removal' },
+  { label: 'Stump Grinding', href: '/services/stump-grinding' },
+  { label: 'Gravel & Mulch Delivery', href: '/services/gravel-mulch-delivery' },
 ];
 
 const trustBadges = [
@@ -47,7 +49,7 @@ export default function Footer() {
           <div>
             <Logo variant="dark" size="sm" href="/" />
             <p className="mt-4 text-sm text-slate-400 leading-relaxed">
-              {siteConfig.tagline}. Serving Boise and the Treasure Valley with
+              {siteConfig.tagline}. Serving Rio Rancho and Central New Mexico with
               respectful, eco-friendly junk removal you can trust.
             </p>
           </div>
@@ -96,7 +98,8 @@ export default function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3">
-              <li>
+              {/* Phone — hidden until phone number is configured */}
+              {/* <li>
                 <a
                   href={siteConfig.phoneHref}
                   className="flex items-center gap-2 text-sm text-slate-400 hover:text-bronze transition-colors"
@@ -104,7 +107,7 @@ export default function Footer() {
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   {siteConfig.phone}
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}

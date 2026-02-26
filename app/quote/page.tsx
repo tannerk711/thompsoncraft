@@ -117,7 +117,7 @@ export default function QuotePage() {
         const errorData = await saveLeadRes.json();
         console.error('Failed to save lead:', errorData);
         // Still show results but log the error
-        alert('Your quote was generated successfully, but there was an issue saving your information. Please call us directly at (844) 543-JUNK');
+        alert('Your quote was generated successfully, but there was an issue saving your information. Please email us directly at Thompsoncraftllc@gmail.com');
       }
 
       setIsGenerating(false);

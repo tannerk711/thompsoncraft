@@ -4,7 +4,7 @@ import type { TestimonialSectionProps } from '@/types';
 
 export default function TestimonialSection({
   title = 'What Our Customers Say',
-  subtitle = 'Real reviews from real Treasure Valley residents',
+  subtitle = 'Real reviews from real Central New Mexico residents',
   testimonials,
   variant = 'light',
 }: TestimonialSectionProps) {

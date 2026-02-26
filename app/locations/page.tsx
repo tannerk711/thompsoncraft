@@ -13,14 +13,14 @@ import SectionHeading from '@/components/ui/SectionHeading';
 export const metadata: Metadata = {
   title: `Service Areas | ${siteConfig.name}`,
   description:
-    'Professional junk removal across the Treasure Valley. Serving Boise, Meridian, Nampa, Eagle, and Garden City with same-day service and transparent pricing.',
+    'Professional junk removal across Central New Mexico. Serving Rio Rancho, Albuquerque, Corrales, Santa Fe, and more with same-day service and transparent pricing.',
   alternates: {
     canonical: `${siteConfig.baseUrl}/locations`,
   },
   openGraph: {
     title: `Service Areas | ${siteConfig.name}`,
     description:
-      'Professional junk removal across the Treasure Valley. Serving Boise, Meridian, Nampa, Eagle, and Garden City.',
+      'Professional junk removal across Central New Mexico. Serving Rio Rancho, Albuquerque, Corrales, Santa Fe, and more.',
     url: `${siteConfig.baseUrl}/locations`,
     siteName: siteConfig.name,
     type: 'website',
@@ -32,13 +32,12 @@ export default function LocationsIndexPage() {
     <>
       {/* Hero */}
       <HeroSection
-        backgroundImage="/images/locations/boise-hero.jpg"
-        backgroundAlt="Treasure Valley Idaho service area"
-        badge="Treasure Valley Coverage"
-        headline="Serving the Treasure Valley"
-        subtext="From Boise to Nampa and everywhere in between, our professional junk removal team is ready to serve your neighborhood with same-day availability and transparent pricing."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+        backgroundImage="/images/locations/rio-rancho-hero.jpg"
+        backgroundAlt="Central New Mexico service area"
+        badge="Central New Mexico Coverage"
+        headline="Serving Central New Mexico"
+        subtext="From Rio Rancho to Santa Fe and everywhere in between, our professional junk removal team is ready to serve your neighborhood with same-day availability and transparent pricing."
+        primaryCta={{ label: 'Contact Us', href: '/contact' }}
       />
 
       {/* Location Cards Grid */}
@@ -62,7 +61,7 @@ export default function LocationsIndexPage() {
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={location.heroImage}
-                      alt={`Junk removal in ${location.city}, Idaho`}
+                      alt={`Junk removal in ${location.city}, New Mexico`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -71,7 +70,7 @@ export default function LocationsIndexPage() {
                     <div className="absolute bottom-4 left-4">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-bronze text-white text-sm font-semibold rounded-full">
                         <MapPin className="w-3.5 h-3.5" />
-                        {location.city}, ID
+                        {location.city}, NM
                       </span>
                     </div>
                   </div>
@@ -128,9 +127,8 @@ export default function LocationsIndexPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <CTASection
             headline="Ready for Junk-Free Living?"
-            subtext="No matter where you are in the Treasure Valley, we provide fast, professional junk removal with transparent pricing and eco-friendly disposal."
-            primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-            secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+            subtext="No matter where you are in Central New Mexico, we provide fast, professional junk removal with transparent pricing and eco-friendly disposal."
+            primaryCta={{ label: 'Contact Us', href: '/contact' }}
             variant="bronze"
           />
         </div>

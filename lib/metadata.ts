@@ -81,7 +81,7 @@ export function generateServiceJsonLd(service: ServicePage) {
     },
     areaServed: {
       '@type': 'State',
-      name: 'Idaho',
+      name: 'New Mexico',
     },
     image: `${siteConfig.baseUrl}${service.heroImage}`,
   };
@@ -101,7 +101,7 @@ export function generateLocationJsonLd(location: LocationPage) {
     address: {
       '@type': 'PostalAddress',
       addressLocality: location.city,
-      addressRegion: 'Idaho',
+      addressRegion: 'New Mexico',
       addressCountry: 'US',
     },
     areaServed: {

@@ -54,12 +54,11 @@ export default async function LocationPage({ params }: Props) {
       {/* Hero */}
       <HeroSection
         backgroundImage={location.heroImage}
-        backgroundAlt={`Junk removal in ${location.city}, Idaho`}
+        backgroundAlt={`Junk removal in ${location.city}, New Mexico`}
         badge={`Serving ${location.city}`}
         headline={location.heroHeadline}
         subtext={location.description}
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+        primaryCta={{ label: 'Contact Us', href: '/contact' }}
         showTrustIndicators
       />
 
@@ -68,7 +67,7 @@ export default async function LocationPage({ params }: Props) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
-              title={`Why ${location.city} Chooses Junkyard Gentlemen`}
+              title={`Why ${location.city} Chooses Thompson Craft LLC`}
               subtitle="Local expertise, fast service, and transparent pricing"
             />
           </ScrollReveal>
@@ -210,14 +209,14 @@ export default async function LocationPage({ params }: Props) {
           <ScrollReveal delay={0.1}>
             <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${encodeURIComponent(location.city + ', Idaho')}&zoom=12`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${encodeURIComponent(location.city + ', New Mexico')}&zoom=12`}
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title={`${location.city}, Idaho service area map`}
+                title={`${location.city}, New Mexico service area map`}
               />
             </div>
           </ScrollReveal>
@@ -247,8 +246,7 @@ export default async function LocationPage({ params }: Props) {
           <CTASection
             headline={`Get Your Instant ${location.city} Junk Quote`}
             subtext={`Ready to clear the clutter? Upload photos of what you need removed and get a free price estimate for ${location.city} junk removal in minutes.`}
-            primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-            secondaryCta={{ label: 'Call (844) 543-JUNK', href: 'tel:+18445435865' }}
+            primaryCta={{ label: 'Contact Us', href: '/contact' }}
             variant="charcoal"
           />
         </div>

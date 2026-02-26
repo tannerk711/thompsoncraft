@@ -27,14 +27,14 @@ import SectionHeading from '@/components/ui/SectionHeading';
 // ── SEO Metadata ─────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'About Us | Junkyard Gentlemen',
+  title: `About Us | ${siteConfig.name}`,
   description:
-    'Meet the Junkyard Gentlemen — Boise\'s trusted junk removal team. Locally owned, eco-friendly, and committed to respectful, professional service across the Treasure Valley.',
+    'Meet Thompson Craft LLC — Central New Mexico\'s trusted junk removal team. Locally owned, eco-friendly, and committed to respectful, professional service across the Rio Rancho and Albuquerque area.',
   alternates: { canonical: `${siteConfig.baseUrl}/about` },
   openGraph: {
-    title: 'About Us | Junkyard Gentlemen',
+    title: `About Us | ${siteConfig.name}`,
     description:
-      'Meet the Junkyard Gentlemen — Boise\'s trusted junk removal team. Locally owned, eco-friendly, and committed to respectful service.',
+      'Meet Thompson Craft LLC — Central New Mexico\'s trusted junk removal team. Locally owned, eco-friendly, and committed to respectful service.',
     url: `${siteConfig.baseUrl}/about`,
     siteName: siteConfig.name,
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.baseUrl}/images/about/team-hero.jpg`,
         width: 1200,
         height: 675,
-        alt: 'The Junkyard Gentlemen team',
+        alt: 'The Thompson Craft LLC team',
       },
     ],
   },
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   // Pick 3 diverse testimonials for the page
   const featuredTestimonials = [
-    testimonials[0], // Sarah Mitchell - Eagle
-    testimonials[2], // Jennifer Rodriguez - Boise
-    testimonials[4], // Lisa Baker - Meridian
+    testimonials[0],
+    testimonials[2],
+    testimonials[4],
   ];
 
   return (
@@ -82,7 +82,7 @@ export default function AboutPage() {
             },
             areaServed: {
               '@type': 'Place',
-              name: 'Treasure Valley, Idaho',
+              name: 'Central New Mexico',
             },
           }),
         }}
@@ -91,15 +91,11 @@ export default function AboutPage() {
       {/* Hero */}
       <HeroSection
         backgroundImage="/images/about/team-hero.jpg"
-        backgroundAlt="The Junkyard Gentlemen professional junk removal team"
+        backgroundAlt="The Thompson Craft LLC professional junk removal team"
         badge="Locally Owned & Operated"
-        headline="Meet the Junkyard Gentlemen"
-        subtext="We're not just a junk removal company — we're your neighbors. Founded in Boise, we bring respect, reliability, and eco-friendly practices to every job across the Treasure Valley."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
+        headline="Meet Thompson Craft LLC"
+        subtext="We're not just a junk removal company — we're your neighbors. Based in Rio Rancho, we bring respect, reliability, and eco-friendly practices to every job across Central New Mexico."
+        primaryCta={{ label: 'Contact Us', href: '/contact' }}
       />
 
       {/* Our Story */}
@@ -108,7 +104,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <SectionHeading
               title="Our Story"
-              subtitle="How a simple idea became the Treasure Valley's most trusted junk removal service"
+              subtitle="How a simple idea became Central New Mexico's most trusted junk removal service"
             />
           </ScrollReveal>
 
@@ -116,23 +112,23 @@ export default function AboutPage() {
             <ScrollReveal direction="left">
               <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
                 <p>
-                  Junkyard Gentlemen was born from a simple observation: junk removal
+                  Thompson Craft LLC was born from a simple observation: junk removal
                   didn&apos;t have to be stressful, disrespectful, or wasteful. Too many
                   companies treat your property carelessly, leave messes behind, and send
                   everything straight to the landfill.
                 </p>
                 <p>
-                  We set out to change that. As lifelong Boise residents, we built a
+                  We set out to change that. As proud New Mexico residents, we built a
                   company around the values our community deserves — professionalism,
                   honesty, and environmental responsibility. Every team member is
                   background-checked, uniformed, and trained to treat your home like
                   their own.
                 </p>
                 <p>
-                  Today, we&apos;ve completed over 500 cleanouts across the Treasure Valley,
+                  Today, we&apos;ve completed hundreds of cleanouts across Central New Mexico,
                   diverting more than 80% of collected items from landfills through our
                   network of local charities and recycling partners. We&apos;re proud to be
-                  the junk removal company Boise trusts most.
+                  the junk removal company Rio Rancho and Albuquerque trust most.
                 </p>
               </div>
             </ScrollReveal>
@@ -230,7 +226,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
             <SectionHeading
-              title="Giving Back to the Treasure Valley"
+              title="Giving Back to Central New Mexico"
               subtitle="We believe a great business lifts up its community"
             />
           </ScrollReveal>
@@ -240,7 +236,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-video">
                 <Image
                   src="/images/about/community.jpg"
-                  alt="Junkyard Gentlemen team volunteering in the community"
+                  alt="Thompson Craft LLC team volunteering in the community"
                   fill
                   className="object-cover"
                 />
@@ -284,7 +280,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <SectionHeading
               title="Our Environmental Commitment"
-              subtitle="Keeping the Treasure Valley beautiful, one pickup at a time"
+              subtitle="Keeping New Mexico beautiful, one pickup at a time"
             />
           </ScrollReveal>
 
@@ -344,7 +340,7 @@ export default function AboutPage() {
       {/* Testimonials */}
       <TestimonialSection
         title="What Our Customers Say"
-        subtitle="Real reviews from real Treasure Valley residents"
+        subtitle="Real reviews from real Central New Mexico residents"
         testimonials={featuredTestimonials}
         variant="light"
       />
@@ -352,13 +348,9 @@ export default function AboutPage() {
       {/* CTA */}
       <CTASection
         headline="Ready to Experience the Difference?"
-        subtext="See why hundreds of Treasure Valley homeowners and businesses trust the Junkyard Gentlemen for respectful, eco-friendly junk removal."
-        primaryCta={{ label: 'Get Your Free Quote', href: '/quote' }}
-        secondaryCta={{
-          label: `Call ${siteConfig.phone}`,
-          href: siteConfig.phoneHref,
-        }}
-        footnote="No commitment required • Same-day service available • Licensed & insured"
+        subtext="See why Central New Mexico homeowners and businesses trust Thompson Craft LLC for respectful, eco-friendly junk removal."
+        primaryCta={{ label: 'Contact Us Today', href: '/contact' }}
+        footnote="Same-day service available • Licensed & insured"
         variant="bronze"
       />
     </>
@@ -402,7 +394,7 @@ const whyChooseUs: Array<{ icon: LucideIcon; title: string; description: string 
     icon: HeartHandshake,
     title: 'Community First',
     description:
-      'Locally owned and operated. We donate usable items to Treasure Valley charities and families in need.',
+      'Locally owned and operated. We donate usable items to Central New Mexico charities and families in need.',
   },
 ];
 
@@ -442,11 +434,11 @@ const communityHighlights: Array<{
     icon: HeartHandshake,
     title: 'Habitat for Humanity ReStore',
     description:
-      'Furniture, appliances, and building materials donated weekly to support affordable housing in the Treasure Valley.',
+      'Furniture, appliances, and building materials donated weekly to support affordable housing in Central New Mexico.',
   },
   {
     icon: Recycle,
-    title: 'Treasure Valley Recycling Network',
+    title: 'Central New Mexico Recycling Network',
     description:
       'Metals, electronics, wood, and plastics sorted and sent to local recycling partners instead of the landfill.',
   },

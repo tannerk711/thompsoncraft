@@ -6,7 +6,10 @@ import { usePathname } from 'next/navigation';
 import { MessageSquareQuote } from 'lucide-react';
 
 export default function FloatingCTA() {
-  const [visible, setVisible] = useState(false);
+  // Hidden until quote system is configured — uncomment to re-enable
+  return null;
+
+  /* const [visible, setVisible] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,5 +34,5 @@ export default function FloatingCTA() {
     >
       <MessageSquareQuote className="w-6 h-6" />
     </Link>
-  );
+  ); */
 }

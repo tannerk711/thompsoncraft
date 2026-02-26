@@ -65,8 +65,8 @@ export default function Header() {
               )}
             </nav>
 
-            {/* Desktop Right: Phone + CTA */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Desktop Right: Phone + CTA — hidden until phone number is configured */}
+            {/* <div className="hidden md:flex items-center gap-4">
               <a
                 href={siteConfig.phoneHref}
                 className="flex items-center gap-2 text-sm font-semibold text-cream hover:text-bronze transition-colors"
@@ -80,7 +80,7 @@ export default function Header() {
               >
                 Free Instant Quote
               </Link>
-            </div>
+            </div> */}
 
             {/* Mobile Hamburger */}
             <button

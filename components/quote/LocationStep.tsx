@@ -1,14 +1,14 @@
 import { useFormContext } from 'react-hook-form';
 
 const cities = [
-  'Boise',
-  'Meridian',
-  'Eagle',
-  'Star',
-  'Nampa',
-  'Caldwell',
-  'Kuna',
-  'Garden City',
+  'Rio Rancho',
+  'Albuquerque',
+  'Corrales',
+  'Los Ranchos',
+  'Sandia Heights',
+  'North Albuquerque Acres',
+  'Los Lunas',
+  'Santa Fe',
 ];
 
 export default function LocationStep() {
@@ -27,7 +27,7 @@ export default function LocationStep() {
         Where is the junk located?
       </h2>
       <p className="mt-2 text-sm text-slate-600">
-        We serve the entire Treasure Valley and surrounding areas.
+        We serve all of Central New Mexico and surrounding areas.
       </p>
 
       <div className="mt-8 space-y-6">
@@ -66,7 +66,7 @@ export default function LocationStep() {
                 message: 'Invalid ZIP code format (use 12345 or 12345-6789)'
               }
             })}
-            placeholder="83702"
+            placeholder="87124"
             maxLength={10}
             className="mt-2 block w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
