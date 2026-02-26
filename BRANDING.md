@@ -445,7 +445,7 @@ public/
   junkyard-gentlemen-logo.svg  — Primary logo (large, detailed)
   logo-light.svg               — Light variant (for dark backgrounds)
   logo-dark.svg                — Dark variant (for light backgrounds)
-  hero-truck.jpg               — Hero section background
+  images/home/home-hero.jpg     — Hero section background
   residential-cleanout.jpg     — Service category photo
   commercial-office.jpg        — Service category photo
   storage-unit.jpg             — Service category photo

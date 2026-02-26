@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${siteConfig.baseUrl}/hero-truck.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${siteConfig.baseUrl}/images/home/home-hero.jpg`,
+        width: 1920,
+        height: 1080,
         alt: 'Thompson Craft LLC - Professional Junk Removal in Rio Rancho',
       },
     ],
@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/hero-truck.jpg"
+        backgroundImage="/images/home/home-hero.jpg"
         backgroundAlt="Professional movers loading furniture onto junk removal truck in Central New Mexico"
         badge="Professional Central New Mexico Junk Removal"
         headline="Professional Junk Removal Service"
