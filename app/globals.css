@@ -6,48 +6,48 @@
 
   /* Thompson Craft LLC Brand Colors - Natural Green Theme */
   /* Charcoal - Dark sophisticated base */
-  --color-charcoal: 0 0% 18%;
-  --color-charcoal-dark: 0 0% 13%;
-  --color-charcoal-light: 0 0% 25%;
+  --color-charcoal: hsl(0 0% 18%);
+  --color-charcoal-dark: hsl(0 0% 13%);
+  --color-charcoal-light: hsl(0 0% 25%);
 
   /* Natural Green - Earthy accent */
-  --color-bronze: 145 55% 35%;
-  --color-bronze-light: 145 55% 48%; /* Lighter for better contrast on dark backgrounds */
-  --color-bronze-dark: 145 55% 24%; /* Darker for better contrast on light backgrounds */
+  --color-bronze: hsl(145 55% 35%);
+  --color-bronze-light: hsl(145 55% 48%);
+  --color-bronze-dark: hsl(145 55% 24%);
 
   /* Cream - Warm neutral backgrounds */
-  --color-cream: 40 20% 96%;
-  --color-cream-dark: 40 15% 90%;
-  --color-cream-darker: 40 15% 85%;
+  --color-cream: hsl(40 20% 96%);
+  --color-cream-dark: hsl(40 15% 90%);
+  --color-cream-darker: hsl(40 15% 85%);
 
   /* Forest Green - Eco accents */
-  --color-forest: 100 45% 25%;
-  --color-forest-light: 100 45% 35%;
+  --color-forest: hsl(100 45% 25%);
+  --color-forest-light: hsl(100 45% 35%);
 
   /* Muted tones */
-  --color-muted: 40 15% 90%;
-  --color-muted-foreground: 0 0% 45%;
+  --color-muted: hsl(40 15% 90%);
+  --color-muted-foreground: hsl(0 0% 45%);
 
   /* Semantic color mappings for Tailwind */
-  --color-background: 40 20% 96%;
-  --color-foreground: 0 0% 18%;
-  --color-primary: 0 0% 18%;
-  --color-primary-foreground: 40 20% 96%;
-  --color-secondary: 145 55% 35%;
-  --color-secondary-foreground: 0 0% 100%;
-  --color-accent: 145 55% 35%;
-  --color-accent-foreground: 0 0% 100%;
-  --color-border: 40 15% 85%;
-  --color-input: 40 15% 90%;
-  --color-ring: 145 55% 35%;
+  --color-background: hsl(40 20% 96%);
+  --color-foreground: hsl(0 0% 18%);
+  --color-primary: hsl(0 0% 18%);
+  --color-primary-foreground: hsl(40 20% 96%);
+  --color-secondary: hsl(145 55% 35%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-accent: hsl(145 55% 35%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-border: hsl(40 15% 85%);
+  --color-input: hsl(40 15% 90%);
+  --color-ring: hsl(145 55% 35%);
 
   /* Card colors */
-  --color-card: 0 0% 100%;
-  --color-card-foreground: 0 0% 18%;
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 18%);
 
   /* Destructive */
-  --color-destructive: 0 84.2% 60.2%;
-  --color-destructive-foreground: 0 0% 98%;
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
 }
 
 :root {

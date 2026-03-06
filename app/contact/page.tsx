@@ -97,7 +97,7 @@ export default function ContactPage() {
               <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
                 Get Your Free Instant Quote
               </h2>
-              <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
+              <p className="text-xl text-white max-w-2xl mx-auto mb-10">
                 Skip the phone tag. Upload a few photos and our AI-powered system
                 will calculate an accurate quote in minutes — no obligation, no
                 pressure.
@@ -105,7 +105,7 @@ export default function ContactPage() {
               <Button href="/quote" variant="white" size="lg" icon={ArrowRight}>
                 Start Your Free Quote
               </Button>
-              <p className="mt-6 text-sm text-white/80">
+              <p className="mt-6 text-sm text-white/90">
                 Takes less than 2 minutes • No account required • Instant results
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <h3 className="text-lg font-bold text-charcoal mb-2">
                     {method.title}
                   </h3>
-                  <p className="text-bronze font-semibold text-lg mb-2">
+                  <p className="text-charcoal font-semibold text-lg mb-2">
                     {method.value}
                   </p>
                   <p className="text-sm text-slate-600">{method.note}</p>
@@ -151,7 +151,7 @@ export default function ContactPage() {
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
-            <div className="rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl">
+            <div className="rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full bg-bronze/20 px-4 py-2 text-sm font-medium text-bronze-light mb-6">
@@ -197,7 +197,7 @@ export default function ContactPage() {
                     <p className="text-2xl font-semibold text-bronze-light">
                       Minutes or Less
                     </p>
-                    <p className="mt-3 text-slate-400 text-sm">
+                    <p className="mt-3 text-slate-300 text-sm">
                       Average response time during business hours
                     </p>
                   </div>

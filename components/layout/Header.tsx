@@ -38,7 +38,7 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Logo variant="light" size="sm" href="/" />
+            <Logo variant="dark" size="sm" href="/" />
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">
@@ -55,7 +55,7 @@ export default function Header() {
                     href={item.href}
                     className={`text-sm font-medium transition-colors ${
                       isActive(item.href)
-                        ? 'text-bronze'
+                        ? 'text-white'
                         : 'text-slate-200 hover:text-white'
                     }`}
                   >

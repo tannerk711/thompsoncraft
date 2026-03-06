@@ -41,14 +41,14 @@ const trustBadges = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-700 bg-gradient-to-br from-charcoal via-slate-800 to-charcoal">
+    <footer className="border-t border-charcoal-light bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal">
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:px-8">
         {/* 4-Column Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Brand */}
           <div>
             <Logo variant="dark" size="sm" href="/" />
-            <p className="mt-4 text-sm text-slate-400 leading-relaxed">
+            <p className="mt-4 text-sm text-slate-300 leading-relaxed">
               {siteConfig.tagline}. Serving Rio Rancho and Central New Mexico with
               respectful, eco-friendly junk removal you can trust.
             </p>
@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-bronze transition-colors"
+                    className="text-sm text-slate-300 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-400 hover:text-bronze transition-colors"
+                    className="text-sm text-slate-300 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -111,20 +111,20 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2 text-sm text-slate-400 hover:text-bronze transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
                   {siteConfig.email}
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-slate-400">
+              <li className="flex items-start gap-2 text-sm text-slate-300">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
                   {siteConfig.address.city}, {siteConfig.address.state}{' '}
                   {siteConfig.address.zip}
                 </span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-slate-400">
+              <li className="flex items-center gap-2 text-sm text-slate-300">
                 <Clock className="w-4 h-4 flex-shrink-0" />
                 {siteConfig.hours}
               </li>
@@ -137,9 +137,9 @@ export default function Footer() {
           {trustBadges.map((badge) => (
             <div
               key={badge.label}
-              className="flex items-center gap-2 text-sm text-slate-400"
+              className="flex items-center gap-2 text-sm text-slate-300"
             >
-              <badge.icon className="w-5 h-5 text-bronze" />
+              <badge.icon className="w-5 h-5 text-bronze-light" />
               <span>{badge.label}</span>
             </div>
           ))}
@@ -147,14 +147,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
+          <div className="flex gap-6 text-sm text-slate-400">
             <Link
               href="/privacy"
-              className="hover:text-bronze transition-colors"
+              className="hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>

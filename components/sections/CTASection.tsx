@@ -12,7 +12,7 @@ export default function CTASection({
   const containerStyles =
     variant === 'bronze'
       ? 'rounded-3xl bg-bronze p-12 lg:p-16 shadow-2xl'
-      : 'rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl';
+      : 'rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl';
 
   const primaryVariant = variant === 'bronze' ? 'white' : 'bronze';
   const secondaryVariant = 'outline';

@@ -161,7 +161,7 @@ export default function Home() {
 
         {/* Local Expertise Section */}
         <ScrollReveal className="mx-auto mt-32 max-w-7xl">
-          <div className="rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl">
+          <div className="rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl">
             <SectionHeading
               title="Central New Mexico Locals"
               subtitle="We understand the unique needs of New Mexico communities"

@@ -197,7 +197,7 @@ export default function AboutPage() {
             />
           </ScrollReveal>
 
-          <div className="rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl">
+          <div className="rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {companyValues.map((value, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>

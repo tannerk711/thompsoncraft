@@ -89,7 +89,7 @@ export default function LocationsIndexPage() {
                       {location.neighborhoods.slice(0, 4).map((n) => (
                         <span
                           key={n}
-                          className="text-xs px-2.5 py-1 bg-cream rounded-full text-slate-500"
+                          className="text-xs px-2.5 py-1 bg-cream rounded-full text-slate-600"
                         >
                           {n}
                         </span>

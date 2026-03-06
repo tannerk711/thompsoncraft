@@ -67,7 +67,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
             <div className="flex items-center justify-end p-5">
               <button
                 onClick={onClose}
-                className="p-2 text-slate-400 hover:text-white transition-colors"
+                className="p-2 text-slate-300 hover:text-white transition-colors"
                 aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
@@ -104,7 +104,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                               <Link
                                 href={item.href}
                                 onClick={onClose}
-                                className="block py-2 text-sm text-bronze font-medium hover:text-bronze-light transition-colors"
+                                className="block py-2 text-sm text-bronze-light font-medium hover:text-white transition-colors"
                               >
                                 View All {item.label}
                               </Link>
@@ -113,7 +113,7 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                                   key={child.href}
                                   href={child.href}
                                   onClick={onClose}
-                                  className="block py-2 text-sm text-slate-400 hover:text-white transition-colors"
+                                  className="block py-2 text-sm text-slate-300 hover:text-white transition-colors"
                                 >
                                   {child.label}
                                 </Link>

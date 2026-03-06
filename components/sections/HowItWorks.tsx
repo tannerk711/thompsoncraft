@@ -10,7 +10,7 @@ export default function HowItWorks({
 }: HowItWorksProps) {
   const bgClass =
     variant === 'dark'
-      ? 'rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl'
+      ? 'rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl'
       : '';
   const stepBg = variant === 'dark' ? 'bg-white/10 border border-white/20' : 'bg-white border border-slate-200';
   const titleColor = variant === 'dark' ? 'text-white' : 'text-charcoal';

@@ -14,7 +14,7 @@ export default function TestimonialSection({
       : 'bg-white border border-slate-200 shadow-md';
   const quoteColor = variant === 'dark' ? 'text-slate-200' : 'text-slate-700';
   const nameColor = variant === 'dark' ? 'text-white' : 'text-charcoal';
-  const locationColor = variant === 'dark' ? 'text-slate-400' : 'text-slate-500';
+  const locationColor = variant === 'dark' ? 'text-slate-300' : 'text-slate-500';
   const borderColor = variant === 'dark' ? 'border-white/20' : 'border-slate-200';
 
   return (

@@ -40,7 +40,7 @@ export default function NavDropdown({ item, isActive }: NavDropdownProps) {
         href={item.href}
         className={`flex items-center gap-1 text-sm font-medium transition-colors ${
           isActive
-            ? 'text-bronze'
+            ? 'text-white'
             : 'text-slate-200 hover:text-white'
         }`}
       >

@@ -24,7 +24,7 @@ export default function Logo({ variant = 'light', size = 'md', href = '/' }: Log
       width={dimensions.width}
       height={dimensions.height}
       priority
-      className="transition-opacity hover:opacity-80"
+      className={`transition-opacity hover:opacity-80 ${variant === 'dark' ? 'brightness-0 invert' : ''}`}
     />
   );
 

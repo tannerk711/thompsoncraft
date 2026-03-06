@@ -221,7 +221,7 @@ export default function PricingPage() {
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal>
-            <div className="rounded-3xl bg-gradient-to-br from-charcoal via-slate-800 to-charcoal p-12 lg:p-16 shadow-2xl text-center">
+            <div className="rounded-3xl bg-gradient-to-br from-charcoal via-charcoal-dark to-charcoal p-12 lg:p-16 shadow-2xl text-center">
               <div className="w-20 h-20 rounded-full bg-bronze flex items-center justify-center mx-auto mb-8">
                 <ShieldCheck className="w-10 h-10 text-white" />
               </div>
@@ -268,7 +268,7 @@ export default function PricingPage() {
                     <th className="text-center p-4 font-semibold">
                       <span className="text-bronze-light">Thompson Craft LLC</span>
                     </th>
-                    <th className="text-center p-4 font-semibold text-slate-400">
+                    <th className="text-center p-4 font-semibold text-slate-300">
                       Typical Competitors
                     </th>
                   </tr>
