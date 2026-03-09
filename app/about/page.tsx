@@ -70,7 +70,7 @@ export default function AboutPage() {
             '@type': 'Organization',
             name: siteConfig.name,
             url: siteConfig.baseUrl,
-            telephone: siteConfig.phoneHref.replace('tel:', ''),
+            ...(siteConfig.phoneHref ? { telephone: siteConfig.phoneHref.replace('tel:', '') } : {}),
             email: siteConfig.email,
             description: siteConfig.tagline,
             address: {

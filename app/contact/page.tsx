@@ -58,7 +58,7 @@ export default function ContactPage() {
             '@type': 'LocalBusiness',
             name: siteConfig.name,
             url: siteConfig.baseUrl,
-            telephone: siteConfig.phoneHref.replace('tel:', ''),
+            ...(siteConfig.phoneHref ? { telephone: siteConfig.phoneHref.replace('tel:', '') } : {}),
             email: siteConfig.email,
             address: {
               '@type': 'PostalAddress',

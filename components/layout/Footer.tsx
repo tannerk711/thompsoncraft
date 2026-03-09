@@ -98,16 +98,15 @@ export default function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3">
-              {/* Phone — hidden until phone number is configured */}
-              {/* <li>
+              <li>
                 <a
                   href={siteConfig.phoneHref}
-                  className="flex items-center gap-2 text-sm text-slate-400 hover:text-bronze transition-colors"
+                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   {siteConfig.phone}
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
