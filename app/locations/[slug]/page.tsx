@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, MapPin, CheckCircle } from 'lucide-react';
 import { locations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations';
@@ -208,15 +209,12 @@ export default async function LocationPage({ params }: Props) {
 
           <ScrollReveal delay={0.1}>
             <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=${encodeURIComponent(location.city + ', New Mexico')}&zoom=12`}
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`${location.city}, New Mexico service area map`}
+              <Image
+                src="/images/service-area-map.png"
+                alt={`Thompson Craft LLC service area map for ${location.city}, New Mexico`}
+                width={1200}
+                height={800}
+                className="w-full h-auto"
               />
             </div>
           </ScrollReveal>

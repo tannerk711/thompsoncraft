@@ -173,7 +173,6 @@ See `.env.example` for the full list. Key variables:
 | `NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET` | Per-client upload preset |
 | `ZAPIER_WEBHOOK_URL` | Client-specific Zapier webhook URL |
 | `ANTHROPIC_API_KEY` | AI photo estimate feature |
-| `NEXT_PUBLIC_GOOGLE_MAPS_KEY` | Google Maps embed |
 
 ---
 

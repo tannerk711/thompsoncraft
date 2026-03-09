@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Phone,
@@ -220,15 +221,12 @@ export default function ContactPage() {
 
           <ScrollReveal delay={0.1}>
             <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209867.0!2d-106.7!3d35.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220e5b5e388c59%3A0xf2f9e5b3c5f9c9a9!2sRio%20Rancho%2C%20NM!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Thompson Craft LLC service area map"
+              <Image
+                src="/images/service-area-map.png"
+                alt="Thompson Craft LLC service area map covering Rio Rancho, Albuquerque, Corrales, Los Ranchos, Sandia Heights, North Albuquerque Acres, Los Lunas, and Santa Fe"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
               />
             </div>
           </ScrollReveal>
