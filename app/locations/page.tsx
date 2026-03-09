@@ -37,7 +37,7 @@ export default function LocationsIndexPage() {
         badge="Central New Mexico Coverage"
         headline="Serving Central New Mexico"
         subtext="From Rio Rancho to Santa Fe and everywhere in between, our professional junk removal team is ready to serve your neighborhood with same-day availability and transparent pricing."
-        primaryCta={{ label: 'Contact Us', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
       />
 
       {/* Location Cards Grid */}
@@ -128,7 +128,7 @@ export default function LocationsIndexPage() {
           <CTASection
             headline="Ready for Junk-Free Living?"
             subtext="No matter where you are in Central New Mexico, we provide fast, professional junk removal with transparent pricing and eco-friendly disposal."
-            primaryCta={{ label: 'Contact Us', href: '/contact' }}
+            primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
             variant="bronze"
           />
         </div>

@@ -35,7 +35,7 @@ export default function ServicesIndexPage() {
         badge="Full-Service Junk Removal"
         headline="Our Services"
         subtext="From single-item pickups to full property cleanouts, we handle it all with professionalism, transparency, and care for the environment."
-        primaryCta={{ label: 'Contact Us', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
       />
 
       {/* Services Grid */}
@@ -86,7 +86,7 @@ export default function ServicesIndexPage() {
           <CTASection
             headline="Not Sure Which Service You Need?"
             subtext="No worries — reach out and we'll figure out the rest. We handle everything from single items to full property cleanouts."
-            primaryCta={{ label: 'Contact Us', href: '/contact' }}
+            primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
             variant="bronze"
           />
         </div>

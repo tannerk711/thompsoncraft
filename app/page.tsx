@@ -130,7 +130,7 @@ export default function Home() {
         badge="Professional Central New Mexico Junk Removal"
         headline="Professional Junk Removal Service"
         subtext="Respectful, stress-free service that treats your property with care. Serving Rio Rancho and Central New Mexico with eco-friendly junk removal you can trust."
-        primaryCta={{ href: '/contact', label: 'Get In Touch' }}
+        primaryCta={{ href: '/quote', label: 'Free Instant Quote' }}
         showTrustIndicators
       />
 
@@ -374,7 +374,7 @@ export default function Home() {
           <CTASection
             headline="Ready for Stress-Free, Professional Service?"
             subtext="Get a free instant quote in minutes. Our advanced photo analysis system provides accurate, transparent pricing."
-            primaryCta={{ href: '/contact', label: 'Contact Us Today' }}
+            primaryCta={{ href: '/quote', label: 'Free Instant Quote' }}
             footnote="Same-day service available • Licensed & insured"
           />
         </div>

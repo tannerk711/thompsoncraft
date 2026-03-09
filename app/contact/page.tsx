@@ -81,9 +81,9 @@ export default function ContactPage() {
         backgroundImage="/images/contact/contact-hero.jpg"
         backgroundAlt="Contact the Thompson Craft LLC team"
         badge="We're Here to Help"
-        headline="Get In Touch"
-        subtext="Have a question or ready to schedule your junk removal? Reach out by email and we'll respond within 60 minutes."
-        primaryCta={{ label: 'Send Us an Email', href: `mailto:${siteConfig.email}` }}
+        headline="Free Instant Quote"
+        subtext="Ready to schedule your junk removal? Get a free instant quote in minutes, or call us at (866) 849-1489."
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
       />
 
       {/* Get Your Free Quote CTA */}

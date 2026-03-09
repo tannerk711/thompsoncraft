@@ -95,7 +95,7 @@ export default function AboutPage() {
         badge="Locally Owned & Operated"
         headline="Meet Thompson Craft LLC"
         subtext="We're not just a junk removal company — we're your neighbors. Based in Rio Rancho, we bring respect, reliability, and eco-friendly practices to every job across Central New Mexico."
-        primaryCta={{ label: 'Contact Us', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
       />
 
       {/* Our Story */}
@@ -349,7 +349,7 @@ export default function AboutPage() {
       <CTASection
         headline="Ready to Experience the Difference?"
         subtext="See why Central New Mexico homeowners and businesses trust Thompson Craft LLC for respectful, eco-friendly junk removal."
-        primaryCta={{ label: 'Contact Us Today', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
         footnote="Same-day service available • Licensed & insured"
         variant="bronze"
       />

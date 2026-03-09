@@ -58,7 +58,7 @@ export default async function LocationPage({ params }: Props) {
         badge={`Serving ${location.city}`}
         headline={location.heroHeadline}
         subtext={location.description}
-        primaryCta={{ label: 'Contact Us', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
         showTrustIndicators
       />
 
@@ -246,7 +246,7 @@ export default async function LocationPage({ params }: Props) {
           <CTASection
             headline={`Get Your Instant ${location.city} Junk Quote`}
             subtext={`Ready to clear the clutter? Upload photos of what you need removed and get a free price estimate for ${location.city} junk removal in minutes.`}
-            primaryCta={{ label: 'Contact Us', href: '/contact' }}
+            primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
             variant="charcoal"
           />
         </div>

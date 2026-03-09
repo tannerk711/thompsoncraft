@@ -57,7 +57,7 @@ export default async function ServicePage({ params }: Props) {
         badge="Professional Service"
         headline={service.heroHeadline}
         subtext={service.heroSubtext}
-        primaryCta={{ label: 'Contact Us', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
         showTrustIndicators
       />
 
@@ -174,7 +174,7 @@ export default async function ServicePage({ params }: Props) {
           <CTASection
             headline="Get Your Free Instant Quote"
             subtext={`Ready for ${service.name.toLowerCase()}? Upload a few photos and get a price estimate in minutes.`}
-            primaryCta={{ label: 'Contact Us', href: '/contact' }}
+            primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
             variant="charcoal"
           />
         </div>

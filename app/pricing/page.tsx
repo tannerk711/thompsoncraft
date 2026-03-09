@@ -61,7 +61,7 @@ export default function PricingPage() {
         badge="Simple & Honest"
         headline="Transparent, Volume-Based Pricing"
         subtext="No hidden fees. No surprise charges. Just honest pricing based on the space your items use in our truck."
-        primaryCta={{ label: 'Contact Us for a Quote', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
       />
 
       {/* How Pricing Works */}
@@ -316,7 +316,7 @@ export default function PricingPage() {
       <CTASection
         headline="Ready for a Free Estimate?"
         subtext="Contact us today for accurate, transparent pricing based on volume. No obligation, no pressure."
-        primaryCta={{ label: 'Contact Us Today', href: '/contact' }}
+        primaryCta={{ label: 'Free Instant Quote', href: '/quote' }}
         footnote="No commitment required • Price confirmed on-site before work begins"
         variant="bronze"
       />
