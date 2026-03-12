@@ -55,14 +55,6 @@ export const metadata: Metadata = {
     url: siteConfig.baseUrl,
     siteName: siteConfig.name,
     type: 'website',
-    images: [
-      {
-        url: `${siteConfig.baseUrl}/images/home/home-hero.jpg`,
-        width: 1920,
-        height: 1080,
-        alt: 'Thompson Craft LLC - Professional Junk Removal in Rio Rancho',
-      },
-    ],
   },
 };
 
