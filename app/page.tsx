@@ -118,7 +118,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/images/home/home-hero.jpg"
-        backgroundAlt="Professional movers loading furniture onto junk removal truck in Central New Mexico"
+        backgroundAlt="Junk removal crew loading furniture and debris into a dump trailer in a New Mexico neighborhood"
         badge="Professional Central New Mexico Junk Removal"
         headline="Professional Junk Removal Service"
         subtext="Respectful, stress-free service that treats your property with care. Serving Rio Rancho and Central New Mexico with eco-friendly junk removal you can trust."
